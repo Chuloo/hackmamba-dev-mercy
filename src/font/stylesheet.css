@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Parabole';
+    src: url('../font/Parabole.eot');
+    src: local('Parabole'),
+        url('Parabole.eot?#iefix') format('embedded-opentype'),
+        url('../font/Parabole.woff2') format('woff2'),
+        url('../font/Parabole.woff') format('woff'),
+        url('../font/Parabole.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
