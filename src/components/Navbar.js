@@ -25,7 +25,11 @@ export default function Navbar() {
         </ul>
       </nav>
 
-      <Btn text="Contact Us" backgroundColor="bg-secondary" />
+      <Btn
+        text="Contact Us"
+        backgroundColor="bg-secondary"
+        textColor="text-white"
+      />
     </div>
   );
 }

@@ -20,13 +20,16 @@ module.exports = {
         productSectionBg: "#221C3F",
         strategyBg: "#EBE8F0",
         subColor: "#312A4F",
+        outcomePText: "#E1E1E1",
+        communityBg: "#FEF75D",
       },
       boxShadow: {
         heroIllustration:
           "0px 4px 20px -2px rgba(50, 50, 71, 0.08), 0px 0px 1px 0px rgba(12, 26, 75, 0.10)",
         folderShadow: "0px 4px 60px 0 rgba(0, 0, 0, 0.08)",
-        motoBackground:
-          "linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)",
+        testimonialShadow: "0px -1px 55px 0px rgba(59, 59, 59, 0.16)",
+        testimonialShadow2:
+          "drop-shadow(0px 11px 20px rgba(148, 148, 148, 0.26))",
       },
     },
   },

@@ -5,6 +5,8 @@ import Product from "../components/Product";
 import Strategy from "../components/Strategy";
 import Moto from "../components/Moto";
 import Outcome from "../components/Outcome";
+import Testimonial from "../components/Testimonial";
+import Community from "../components/Community";
 
 const Home = () => {
   return (
@@ -14,6 +16,8 @@ const Home = () => {
       <Strategy />
       <Moto />
       <Outcome />
+      <Testimonial />
+      <Community />
     </Layout>
   );
 };

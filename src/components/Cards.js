@@ -75,31 +75,6 @@ export default function Cards() {
     },
   ];
 
-  const oneRow = [
-    {
-      image: data.green.childImageSharp.fluid,
-      title: "Reduce Support Costs",
-      description:
-        "Excellent content gives your product a competitive advantage while lowering total support costs.",
-      wide: true,
-      icon: greenIcon,
-    },
-    {
-      image: data.orange.childImageSharp.fluid,
-      title: "Increase Customer Retention",
-      description:
-        "Customers who find your product easy to use are more inclined to repurchase or upgrade their purchase.",
-      icon: orangeIcon,
-    },
-    {
-      image: data.orange.childImageSharp.fluid,
-      title: "Increase Customer Retention",
-      description:
-        "Customers who find your product easy to use are more inclined to repurchase or upgrade their purchase.",
-      icon: orangeIcon,
-    },
-  ];
-
   return (
     <div>
       {/* <div className="flex odd:flex-row-reverse">
@@ -170,3 +145,4 @@ function Folder({ content }) {
     </div>
   );
 }
+
