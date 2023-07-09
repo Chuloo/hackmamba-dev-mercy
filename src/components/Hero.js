@@ -89,8 +89,6 @@ export default function Hero() {
           />
         ) : null}
 
-        <div className="w-[16.813rem] h-[16.813rem] opacity-[0.23999999463558197] rounded-[16.813rem] bg-circleBg blur-[9.375rem] absolute top-[193px] right-[12px] mt-[1.875rem]"></div>
-
         {data?.illustration3 ? (
           <Img
             className="image-item w-[128px] h-[166px] ml-[76px] shadow-heroIllustration rounded-[16px] mt-[153px] left-[15px]"

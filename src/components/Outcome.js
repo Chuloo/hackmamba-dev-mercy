@@ -3,6 +3,9 @@ import React from "react";
 import CurvedLine from "./CurvedLine";
 import Img from "gatsby-image";
 import orangeIcon from "../images/orangeIcon.svg";
+import icon1 from "../images/icon1.svg";
+import icon2 from "../images/icon2.svg";
+import icon3 from "../images/icon3.svg";
 
 export default function Outcome() {
   const data = useStaticQuery(graphql`
@@ -18,21 +21,21 @@ export default function Outcome() {
   `);
   const outcomeRow = [
     {
-      icon: orangeIcon,
+      icon: icon1,
       image: data.outcomeFolder.childImageSharp.fluid,
       title: "Lean Team",
       description:
         "Maintain an efficient technical writing team. Focus on the most impactful product outcomes & delegate the rest.",
     },
     {
-      icon: orangeIcon,
+      icon: icon2,
       image: data.outcomeFolder.childImageSharp.fluid,
       title: "Faster Delivery",
       description:
         "Ship quality documentation, blog posts, and articles at three times the speed with fewer people to manage.",
     },
     {
-      icon: orangeIcon,
+      icon: icon3,
       image: data.outcomeFolder.childImageSharp.fluid,
       title: "Lower Cost",
       description:
@@ -73,7 +76,8 @@ export default function Outcome() {
   }
 
   return (
-    <section className="mx-[80px] bg-productSectionBg rounded-[40px] py-[120px] px-[55px] my-[80px]">
+    <section className="mx-[80px] bg-productSectionBg rounded-[40px] py-[120px] px-[55px] my-[80px] relative overflow-hidden">
+      <div className="green-gradient top-[-128px] left-[-9px] w-[350px] h-[350px] opacity-[0.2800000011920929] bg-greenGradient blur-[167px] absolute "></div>
       <CurvedLine headingText="Focus On High-Value Outcomes" />
       <div className="flex gap-[54px] ">
         <FolderRow rowContent={outcomeRow} />

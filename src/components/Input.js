@@ -12,7 +12,7 @@ export default function Input() {
       />
       <div className="absolute top-[50%] translate-y-[-50%]  right-[0] pr-[5px] ">
         <Btn
-          text="Get Started"
+          text={"Get Started"}
           backgroundColor="bg-secondary"
           textColor="text-white"
         />

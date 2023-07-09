@@ -37,8 +37,8 @@ export default function Testimonial() {
             and retain top developers.
           </p>
           <div className="">
-            <img src={prev} alt="prev" className="absolute left-[-17px] top-[50%] translate-y-[-50%]"/>
-            <img src={next} alt="next" className="absolute right-[-17px] top-[50%] translate-y-[-50%]"/>
+            <img src={prev} alt="prev" className="absolute left-[-17px] top-[50%] translate-y-[-50%] cursor-pointer"/>
+            <img src={next} alt="next" className="absolute right-[-17px] top-[50%] translate-y-[-50%] cursor-pointer"/>
           </div>
           <p className="text-base leading-[20px] text-center mt-[32px] mb-[8px]">
             Tessa Mero

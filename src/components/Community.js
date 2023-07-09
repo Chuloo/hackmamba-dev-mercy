@@ -11,8 +11,9 @@ import Btn from "./Btn";
 
 export default function Community() {
   return (
-    <section className=" bg-productSectionBg pt-[102px] pb-[18px] relative">
+    <section className=" bg-productSectionBg pt-[102px] pb-[18px] relative overflow-hidden">
       <div className=" max-w-[1170px] mx-[auto] ">
+        <div className="rounded-[480.87px] w-[353px] h-[481px] opacity-[0.2800000011920929] bg-greenGradient blur-[167px] absolute top-[-238px] left-[766px]"></div>
         <div className=" max-w-[1084px] mx-[auto] ">
           <img src={base} alt="img" />
         </div>
@@ -50,6 +51,8 @@ export default function Community() {
           />
         </div>
 
+        <div className="w-[132px] h-[180px] bg-white opacity-[0.30000001192092896] absolute top-[410px] right-[-23px] blur-[132px]"></div>
+
         <div className="text-white max-w-[602px] mx-[auto] absolute top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%] mt-[65px]">
           <h2 className="mx-[auto] max-w-[629px] text-center mb-[16px]">
             Join Our Technical Writing Community
@@ -66,6 +69,7 @@ export default function Community() {
               textColor="text-primary"
             />
           </div>
+          <div className="w-[164px] h-[223px] bg-greenGradient2  blur-[132px] absolute bottom-[-260px] opacity-[0.2199999988079071]"></div>
         </div>
       </div>
     </section>

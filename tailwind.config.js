@@ -22,6 +22,8 @@ module.exports = {
         subColor: "#312A4F",
         outcomePText: "#E1E1E1",
         communityBg: "#FEF75D",
+        greenGradient: "#14A800",
+        greenGradient2: "#24ED2C",
       },
       boxShadow: {
         heroIllustration:

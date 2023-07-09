@@ -4,6 +4,7 @@ import Input from "./Input";
 import footerLogo from "../images/footer-logo.svg";
 import footerTwitter from "../images/footer-twitter.svg";
 import footerLinkedin from "../images/footer-linkedin.svg";
+import connection2 from "../images/connection2.svg";
 
 export default function Footer() {
   return (
@@ -12,8 +13,11 @@ export default function Footer() {
         <h2 className="text-[56px] leading-[80px] max-w-[813px] text-primary">
           Managing a business is hard enough, let us handle{" "}
           <span className="span-style px-4">your </span>
-          <span className="span-style px-4">content.</span>
+          <span className="span-style px-[11px]">content.</span>
         </h2>
+        <div className="absolute top-[193px] left-[331px]">
+          <img src={connection2} alt='img'/>
+        </div>
 
         <div className="flex justify-between items-center mt-[38px]">
           <p>
