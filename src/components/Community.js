@@ -1,12 +1,12 @@
 import React from "react";
 import base from "../images/base.svg";
 import logo2 from "../images/logo2.svg";
-import item1 from "../images/item1.png";
-import item2 from "../images/item2.png";
-import item3 from "../images/item3.png";
-import item4 from "../images/item4.png";
-import item5 from "../images/item5.png";
-import item6 from "../images/item6.png";
+import item1 from "../images/Item1.png";
+import item2 from "../images/Item2.png";
+import item3 from "../images/Item3.png";
+import item4 from "../images/Item4.png";
+import item5 from "../images/Item5.png";
+import item6 from "../images/Item6.png";
 import Btn from "./Btn";
 
 export default function Community() {
