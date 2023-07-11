@@ -32,4 +32,11 @@ h2 {
     @apply bg-spanBg rounded-2xl border border-borderLine
   }
 
+  .folder-style  {
+    @apply text-folderTextColor text-base leading-[30px]
+  }
+  .tab-style  {
+    @apply py-[4px] px-[12px] bg-tabBgColor text-primary rounded-[16px] hover:bg-tabTextbgHover hover:text-tabTextColorHover text-sm cursor-pointer
+  }
+
 }

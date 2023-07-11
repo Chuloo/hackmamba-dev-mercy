@@ -1,7 +1,7 @@
 import React from "react";
 import Btn from "./Btn";
 
-export default function Input() {
+export default function Input({ btnLabel }) {
   return (
     <div className="relative mt-[48px] max-w-[526px]">
       <input
@@ -12,7 +12,7 @@ export default function Input() {
       />
       <div className="absolute top-[50%] translate-y-[-50%]  right-[0] pr-[5px] ">
         <Btn
-          text={"Get Started"}
+          text={btnLabel || "Get Started"}
           backgroundColor="bg-secondary"
           textColor="text-white"
         />

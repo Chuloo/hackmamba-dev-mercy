@@ -24,6 +24,15 @@ module.exports = {
         communityBg: "#FEF75D",
         greenGradient: "#14A800",
         greenGradient2: "#24ED2C",
+        blogGradient: "#F98272",
+        folderTextColor: "#555C63",
+        folderBgColor: "#ffffff80",
+        borderFolderBgColor: "#F0F0F0",
+        readBlogColor: "#4F00A3",
+        borderLine2: "#E1E1E1",
+        tabTextColorHover: "#5925DC",
+        tabTextbgHover: "#F4F3FF",
+        tabBgColor: "#F2F4F7",
       },
       boxShadow: {
         heroIllustration:

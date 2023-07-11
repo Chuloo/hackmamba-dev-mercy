@@ -1,15 +1,59 @@
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 import React from "react";
 import base from "../images/base.svg";
 import logo2 from "../images/logo2.svg";
-import item1 from "../images/item1.png";
-import item2 from "../images/item2.png";
-import item3 from "../images/item3.png";
-import item4 from "../images/item4.png";
-import item5 from "../images/item5.png";
-import item6 from "../images/item6.png";
+
 import Btn from "./Btn";
 
 export default function Community() {
+  const data = useStaticQuery(graphql`
+    query ItemQuery {
+      item1: file(relativePath: { eq: "Item1.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      item2: file(relativePath: { eq: "Item2.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      item3: file(relativePath: { eq: "Item3.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      item4: file(relativePath: { eq: "Item4.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      item5: file(relativePath: { eq: "Item5.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      item6: file(relativePath: { eq: "Item6.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <section className=" bg-productSectionBg pt-[102px] pb-[18px] relative overflow-hidden">
       <div className=" max-w-[1170px] mx-[auto] ">
@@ -23,31 +67,34 @@ export default function Community() {
           className=" absolute top-0 left-[50%] translate-x-[-50%] mt-[120px]"
         />
 
-        <div className="absolute top-[266px]">
-          <img src={item1} alt="img" className="max-w-[130px]" />
-          <img
-            src={item2}
-            alt="img"
-            className="max-w-[130px] ml-[127px] mt-[17px] "
+        <div className="absolute top-[266px] flex flex-col w-[1084px]">
+          <Img fluid={data.item1.childImageSharp.fluid} className="w-[130px] ml-[5px]" />
+
+          <Img
+            fluid={data.item2.childImageSharp.fluid}
+            className="ml-[127px] mt-[17px] w-[130px]"
           />
-          <img
-            src={item3}
-            alt="img"
-            className="max-w-[130px] mt-[10px] ml-[90px]"
+
+          <Img
+            fluid={data.item3.childImageSharp.fluid}
+            className="w-[130px] mt-[10px] ml-[90px]"
           />
         </div>
 
-        <div className="absolute top-[328px] flex flex-col w-[1084px] align-bottom items-end">
-          <img src={item4} alt="img" className="max-w-[130px] mr-[-16px]" />
-          <img
-            src={item5}
-            alt="img"
-            className="max-w-[130px] mr-[-98px] mt-[-13px]"
+        <div className="absolute top-[328px] flex flex-col w-[1084px]  items-end">
+          <Img
+            fluid={data.item4.childImageSharp.fluid}
+            className="w-[130px] mr-[-16px] "
           />
-          <img
-            src={item6}
-            alt="img"
-            className="max-w-[130px] mt-[-40px] mr-[80px]"
+
+          <Img
+            fluid={data.item5.childImageSharp.fluid}
+            className="w-[130px] mr-[-98px] mt-[-13px]"
+          />
+
+          <Img
+            fluid={data.item6.childImageSharp.fluid}
+            className="w-[130px] mt-[-40px] mr-[80px]"
           />
         </div>
 
