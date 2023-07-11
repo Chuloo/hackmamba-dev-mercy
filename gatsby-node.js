@@ -1,20 +1,20 @@
 const path = require("path");
 
-exports.createPages = async ({ graphgl, actions }) => {
-  console.log('first')
-  const { data } = await graphgl(`
-  query MyQuery {
-    allMarkdownRemark {
-      nodes {
-        frontmatter {
-          slug
+exports.createPages = async ({ graphql, actions }) => {
+  console.log("first");
+  const { data } = await graphql(`
+    query MyQuery {
+      allMarkdownRemark {
+        nodes {
+          frontmatter {
+            slug
+          }
         }
       }
     }
-  }
   `);
 
-  console.log({data});
+  console.log({ data });
 
   data.allMarkdownRemark.nodes.forEach((node) => {
     actions.createPage({
