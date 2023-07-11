@@ -45,7 +45,13 @@ export default function Blog() {
             thumb {
               childImageSharp {
                 fluid {
+                  sizes
                   src
+                  srcSet
+                  srcSetWebp
+                  srcWebp
+                  tracedSVG
+                  aspectRatio
                 }
               }
             }
@@ -55,11 +61,12 @@ export default function Blog() {
       }
     }
   `);
-  
+
   const mainPost = [...data?.featuredTrue?.nodes].shift();
   const restPost = [...data?.featuredTrue?.nodes].slice(1);
 
   const subPost = data?.featuredFalse?.nodes;
+
 
   return (
     <Layout>

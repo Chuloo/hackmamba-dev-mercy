@@ -5,6 +5,7 @@ import Img from "gatsby-image";
 import icon1 from "../images/icon1.svg";
 import icon2 from "../images/icon2.svg";
 import icon3 from "../images/icon3.svg";
+// import untitled from "../images/untitled.svg";
 
 export default function Outcome() {
   const data = useStaticQuery(graphql`
@@ -49,9 +50,14 @@ export default function Outcome() {
   function Folder({ content }) {
     return (
       <div className="relative">
-        <div className=" folder-img w-[354px] bg-[linear-gradient(0deg,_#ffffff1f_0%,_#ffffff00_100%)] blur[70px] rounded-[24px]">
+        <div className="folder-img w-[354px]   rounded-[24px]">
           {content?.image ? <Img fluid={content.image} /> : null}
         </div>
+        {/* <img
+          src={untitled}
+          alt="dff"
+          className="folder-img w-[354px] bg-[linear-gradient(0deg,_#ffffff1f_0%,_#ffffff00_100%)] blur[70px] rounded-[24px]"
+        /> */}
         <div className="absolute top-0 left-[24px] mt-[24px]">
           <div>
             <img

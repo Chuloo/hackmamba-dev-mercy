@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import map from "../images/map.png";
-import photo from "../images/photo.png";
 import prev from "../images/prev.svg";
 import next from "../images/next.svg";
 import Img from "gatsby-image";
@@ -18,7 +17,6 @@ export default function Testimonial() {
       }
     }
   `);
-  console.log(data);
   return (
     <section className="max-w-[1246px] mx-[auto] mt-[160px] ">
       <div
