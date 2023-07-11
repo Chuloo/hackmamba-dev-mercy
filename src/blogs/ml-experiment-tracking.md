@@ -7,6 +7,7 @@ slug: ml-experiment-tracking-dagshub
 featured: true
 thumb: ../images/thumbs/folder1.png
 featuredImg: ../images/featured/featured-img.png
+date: 2021-01-01T00:00:00+00:00
 ---
 
 This blog is part two of a two-part series introducing experiment tracking in machine learning (ML). Here, we cover the practical implementation of experiment tracking using a platform-based tool. Here's [part one](https://hackmamba.io/blog/2022/12/how-to-track-and-analyze-experiments-in-machine-learning-a-beginner-s-guide/) covering an introduction on how to track and analyze experiments in Machine Learning.

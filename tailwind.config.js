@@ -33,6 +33,11 @@ module.exports = {
         tabTextColorHover: "#5925DC",
         tabTextbgHover: "#F4F3FF",
         tabBgColor: "#F2F4F7",
+        contactTextColor: "#ACB8D0",
+        contactTextColor2: "#5A7184;",
+        contactTextColor3: " #232340",
+        contactBorder: "#DFE3EF",
+        contactPlaceholder: "#ACB8D0",
       },
       boxShadow: {
         heroIllustration:
@@ -41,6 +46,8 @@ module.exports = {
         testimonialShadow: "0px -1px 55px 0px rgba(59, 59, 59, 0.16)",
         testimonialShadow2:
           "drop-shadow(0px 11px 20px rgba(148, 148, 148, 0.26))",
+        contactInputShadow: "0px 15px 50px 0px rgba(21, 37, 72, 0.10)",
+        contactInputText: "#5A7184",
       },
     },
   },

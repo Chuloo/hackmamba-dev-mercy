@@ -12,6 +12,7 @@ export default function Blog() {
       featuredTrue: allMarkdownRemark(
         filter: { frontmatter: { featured: { eq: true } } }
         limit: 4
+        sort: { frontmatter: { date: ASC } }
       ) {
         nodes {
           frontmatter {
@@ -67,7 +68,6 @@ export default function Blog() {
 
   const subPost = data?.featuredFalse?.nodes;
 
-
   return (
     <Layout>
       <section>
@@ -85,7 +85,7 @@ export default function Blog() {
               Nisi elementum ultrices auctor amet neque. Dui feugiat ut nibh
               vestibulum.
             </p>
-            <div className="w-[16.813rem] h-[16.813rem] opacity-[0.4000000059604645] rounded-[16.813rem] blur-[150px] absolute top-0 right-0 mt-[1.875rem] bg-blogGradient"></div>
+            <div className="gradient-style top-0 right-0"></div>
           </div>
           <div>
             <h2 className="text-primary text-[40px] mb-[32px]">

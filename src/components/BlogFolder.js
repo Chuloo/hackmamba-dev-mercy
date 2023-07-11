@@ -3,6 +3,7 @@ import React from "react";
 import arrow from "../images/arrow.svg";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
+import folder from '../images/thumbs/folder1.png'
 
 export default function BlogFolder({ wide, post }) {
   const data = useStaticQuery(graphql`
@@ -21,16 +22,23 @@ export default function BlogFolder({ wide, post }) {
     <section>
       <Link to={`/blog/${post.frontmatter.slug}`} key={post.id}>
         {wide ? (
-          <div className="relative">
+          <div>
             <div className="max-w-[698px]">
-              <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
+              <div className="relative">
+                <div>
+                  {/* <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} /> */}
+                  <img src={folder} alt="dd"/>
+                </div>
 
-              <div className="bg-folderBgColor py-[16px] pl-[24px] pr-[13px] border-t-2 backdrop-blur-[12px] border-borderFolderBgColor-500 absolute top-[283px] left-0 w-[698px]">
-                <div className="flex justify-between">
-                  <p className="folder-style z-10">{post.frontmatter.author}</p>
-                  <p className="folder-style z-10">
-                    {post.frontmatter.publish}
-                  </p>
+                <div className="bg-folderBgColor py-[16px] pl-[24px] pr-[13px] border-t-2 backdrop-blur-[12px] border-borderFolderBgColor-500 absolute bottom-[0] left-0 w-[698px] ">
+                  <div className="flex justify-between">
+                    <p className="folder-style z-10">
+                      {post.frontmatter.author}
+                    </p>
+                    <p className="folder-style z-10">
+                      {post.frontmatter.publish}
+                    </p>
+                  </div>
                 </div>
               </div>
               <h2 className="text-[32px] leading-[42px] tracking-[1px] text-primary mt-[40px] mb-[16px]">

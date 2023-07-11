@@ -24,12 +24,13 @@ export default function Navbar() {
           </li>
         </ul>
       </nav>
-
-      <Btn
-        text="Contact Us"
-        backgroundColor="bg-secondary"
-        textColor="text-white"
-      />
+      <Link to="/contact">
+        <Btn
+          text="Contact Us"
+          backgroundColor="bg-secondary"
+          textColor="text-white"
+        />
+      </Link>
     </div>
   );
 }

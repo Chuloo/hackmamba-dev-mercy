@@ -1,11 +1,34 @@
 import React from "react";
 
-export default function Btn({ text, textColor, backgroundColor, ...prop }) {
+export default function Btn({
+  text,
+  textColor,
+  backgroundColor,
+  slimBtn,
+  Icon,
+}) {
   return (
-    <div className={backgroundColor + " rounded-full  w-fit"}>
-      <button className={textColor + " text-base font-medium px-[2.7rem] py-4"}>
-        {text}
-      </button>
+    <div>
+      {slimBtn ? (
+        <div className={backgroundColor + " rounded-full w-fit"}>
+          <button
+            className={textColor + " text-base font-medium px-[45px] py-[12px]"}
+          >
+            <div className="flex items-center gap-[16px]">
+              {Icon}
+              {text}
+            </div>
+          </button>
+        </div>
+      ) : (
+        <div className={backgroundColor + " rounded-full  w-fit"}>
+          <button
+            className={textColor + " text-base font-medium px-[2.7rem] py-4"}
+          >
+            {text}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
