@@ -3,7 +3,6 @@ import Img from "gatsby-image";
 import React from "react";
 import base from "../images/base.svg";
 import logo2 from "../images/logo2.svg";
-
 import Btn from "./Btn";
 
 export default function Community() {
@@ -68,7 +67,10 @@ export default function Community() {
         />
 
         <div className="absolute top-[266px] flex flex-col w-[1084px]">
-          <Img fluid={data.item1.childImageSharp.fluid} className="w-[130px] ml-[5px]" />
+          <Img
+            fluid={data.item1.childImageSharp.fluid}
+            className="w-[130px] ml-[5px]"
+          />
 
           <Img
             fluid={data.item2.childImageSharp.fluid}
