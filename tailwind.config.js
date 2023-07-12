@@ -38,6 +38,9 @@ module.exports = {
         contactTextColor3: " #232340",
         contactBorder: "#DFE3EF",
         contactPlaceholder: "#ACB8D0",
+        contactInputText: "#5A7184",
+        communityFolderText: "#475467",
+        communityFolderText2: "#874FFF",
       },
       boxShadow: {
         heroIllustration:
@@ -47,7 +50,13 @@ module.exports = {
         testimonialShadow2:
           "drop-shadow(0px 11px 20px rgba(148, 148, 148, 0.26))",
         contactInputShadow: "0px 15px 50px 0px rgba(21, 37, 72, 0.10)",
-        contactInputText: "#5A7184",
+        communityShadow: "-5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;",
+      },
+      backgroundImage: {
+        gradientRadial:
+          "radial-gradient(107.32% 141.42% at 0% 0%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.00) 100%)",
+        gradientRadial2:
+          "radial-gradient(113.60% 146.19% at -6.63% 0.00%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.00) 100%)",
       },
     },
   },

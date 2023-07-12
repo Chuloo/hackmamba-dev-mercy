@@ -5,6 +5,7 @@ import Input from "../../components/Input";
 import BlogFolder from "../../components/BlogFolder";
 import SmallFolder from "../../components/SmallFolder";
 import Community from "../../components/Community";
+import Tab from "../../components/Tab";
 
 export default function Blog() {
   const data = useStaticQuery(graphql`
@@ -101,21 +102,9 @@ export default function Blog() {
             </div>
           </div>
 
-          <div className="mt-[137px]">
-            <h2 className="text-primary text-[40px] mb-[36px]">Categories</h2>
-            <div className="flex gap-[16px]">
-              <p className="tab-style">All Posts</p>
-              <p className="tab-style">Machine Learning</p>
-              <p className="tab-style">Devops</p>
-              <p className="tab-style">Flutter</p>
-              <p className="tab-style">Web development</p>
-              <p className="tab-style">Artificial Intelligence</p>
-              <p className="tab-style">Sharing</p>
-              <p className="tab-style">Building</p>
-            </div>
-          </div>
+          <Tab text="Categories" />
 
-          <div className="grid grid-cols-3 mt-[27px] mb-[120px]">
+          <div className="grid grid-cols-3 mt-[27px] mb-[120px] gap-[32px]">
             {subPost.map((post) => (
               <BlogFolder post={post} />
             ))}

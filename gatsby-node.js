@@ -1,7 +1,6 @@
 const path = require("path");
 
 exports.createPages = async ({ graphql, actions }) => {
-  console.log("first");
   const { data } = await graphql(`
     query MyQuery {
       allMarkdownRemark {
@@ -14,7 +13,6 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  console.log({ data });
 
   data.allMarkdownRemark.nodes.forEach((node) => {
     actions.createPage({

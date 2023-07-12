@@ -6,6 +6,7 @@ export default function Btn({
   backgroundColor,
   slimBtn,
   Icon,
+  flexItem,
 }) {
   return (
     <div>
@@ -14,7 +15,11 @@ export default function Btn({
           <button
             className={textColor + " text-base font-medium px-[45px] py-[12px]"}
           >
-            <div className="flex items-center gap-[16px]">
+            <div
+              className={`flex items-center  ${flexItem} ${
+                flexItem ? "gap-[9px]" : "gap-[16px]"
+              }`}
+            >
               {Icon}
               {text}
             </div>

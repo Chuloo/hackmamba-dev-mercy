@@ -83,7 +83,7 @@ export default function Outcome() {
   return (
     <section className="mx-[80px] bg-productSectionBg rounded-[40px] py-[120px] px-[55px] my-[80px] relative overflow-hidden">
       <div className="green-gradient top-[-128px] left-[-9px] w-[350px] h-[350px] opacity-[0.2800000011920929] bg-greenGradient blur-[167px] absolute "></div>
-      <CurvedLine headingText="Focus On High-Value Outcomes" />
+      <CurvedLine headingText="Focus On High-Value Outcomes" width="max-w-[441px]" />
       <div className="flex gap-[54px] ">
         <FolderRow rowContent={outcomeRow} />
       </div>
