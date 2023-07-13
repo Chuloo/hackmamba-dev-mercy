@@ -41,6 +41,7 @@ module.exports = {
         contactInputText: "#5A7184",
         communityFolderText: "#475467",
         communityFolderText2: "#874FFF",
+        navBarTextColor: "#8B8B8B",
       },
       boxShadow: {
         heroIllustration:

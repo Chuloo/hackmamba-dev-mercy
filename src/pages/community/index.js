@@ -32,35 +32,35 @@ export default function Community() {
           }
         }
       }
-      item1: file(relativePath: { eq: "Item1.png" }) {
+      item1: file(relativePath: { eq: "item7.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      item2: file(relativePath: { eq: "Item2.png" }) {
+      item2: file(relativePath: { eq: "item8.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      item3: file(relativePath: { eq: "Item3.png" }) {
+      item3: file(relativePath: { eq: "item9.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      item4: file(relativePath: { eq: "Item4.png" }) {
+      item4: file(relativePath: { eq: "item10.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      item5: file(relativePath: { eq: "Item5.png" }) {
+      item5: file(relativePath: { eq: "item11.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -100,30 +100,32 @@ export default function Community() {
           <div className="w-[150px] ml-[145px]">
             <img src={logo} alt="logo" className="w-[100%] mt-[238px]" />
           </div>
-          <div className="absolute top-[-56px] w-[516p] right-[178px]">
+          <div className="absolute top-[-56px] w-[516px] right-[178px] z-[-10]">
             <img src={base} alt="img" />
           </div>
 
           <div className="absolute flex flex-col w-[516px] right-0">
             <Img
               fluid={data?.item1?.childImageSharp?.fluid}
-              className="w-[100px] mt-[23px] ml-[-60px]"
+              className="w-[100px] mt-[15px] ml-[-60px]"
             />
             <Img
               fluid={data?.item2?.childImageSharp?.fluid}
-              className="w-[100px]"
-            />
-            <Img
-              fluid={data?.item3?.childImageSharp?.fluid}
-              className="w-[100px]"
-            />
-            <Img
-              fluid={data?.item4?.childImageSharp?.fluid}
-              className="w-[61px]"
+              className="w-[120px] ml-[150px]"
             />
             <Img
               fluid={data?.item5?.childImageSharp?.fluid}
-              className="w-[100px]"
+              className="w-[130px] ml-[274px] mt-[25px]"
+            />
+
+            <Img
+              fluid={data?.item3?.childImageSharp?.fluid}
+              className="w-[90px] ml-[180px] mt-[25px]"
+            />
+
+            <Img
+              fluid={data?.item4?.childImageSharp?.fluid}
+              className="w-[130px] mt-[3px] ml-[-45px]"
             />
           </div>
         </div>
