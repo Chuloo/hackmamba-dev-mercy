@@ -18,13 +18,13 @@ export default function Testimonial() {
     }
   `);
   return (
-    <section className="max-w-[1246px] mx-[auto] mt-[160px] ">
+    <section className="sm:max-w-[1246px] mx-[auto] mt-[160px] max-w-[343px]">
       <div
-        className="bg-no-repeat bg-contain bg-[center_top_6rem] pb-[188px]"
+        className="bg-no-repeat sm:bg-contain bg-cover bg-[center_top_6rem] sm:pb-[188px] pb-[160px]"
         style={{ backgroundImage: `url(${map})` }}
       >
         <div className="">
-          <h2 className="max-w-[489px] mx-[auto] text-center text-primary">
+          <h2 className="sm:max-w-[489px] max-w-[358px] mx-[auto] text-center text-primary leading-[32px] sm:leading-[unset]">
             Don’t just take our word for it
           </h2>
           <p className=" max-w-[489px] mx-[auto] text-center mt-[24px] text-base">
@@ -32,7 +32,7 @@ export default function Testimonial() {
             euismod amet consequat.
           </p>
         </div>
-        <div className="max-w-[759px] mx-[auto] px-[56px] pb-[45px] rounded-[24px] bg-white shadow-testimonialShadow mt-[96px] relative">
+        <div className="max-w-[759px] mx-[auto] px-[32px] sm:pb-[45px] pb-[80px] rounded-[24px] bg-white shadow-testimonialShadow sm:mt-[96px] mt-[104px] relative">
           <Img
             fluid={data.file.childImageSharp.fluid}
             className="w-[80px] h-[80px] left-[50%] translate-x-[-50%] top-[-30px] absolute shadow-testimonialShadow2"
@@ -60,7 +60,7 @@ export default function Testimonial() {
               className="absolute right-[-17px] top-[50%] translate-y-[-50%] cursor-pointer"
             />
           </div>
-          <p className="text-base leading-[20px] text-center mt-[32px] mb-[8px]">
+          <p className="text-base leading-[20px] text-center sm:mt-[32px] mt-[40px] sm:mb-[8px] mb-[15px]">
             Tessa Mero
           </p>
           <p className="text-base leading-[20px] font-normal text-center">

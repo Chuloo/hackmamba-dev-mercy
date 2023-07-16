@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 export default function Moto() {
   return (
     <section className="bg-[linear-gradient(0deg,_#FFF_0%,_#ffffff00_100%)]">
-      <div className="sm:max-w-[1010px] max-w-[358px] my-0 mx-[auto] flex justify-between sm:pt-[121px]  pt-[240px] sm:pb-[128px] pb-'[120px] sm:flex-row flex-col">
+      <div className="sm:max-w-[1010px] max-w-[358px] my-0 mx-[auto] flex justify-between sm:pt-[121px]  pt-[240px] pb-[120px] sm:flex-row flex-col">
         <div>
           <h2 className="text-primary sm:max-w-[399px] max-w-[358px] sm:mb-[34px] mb-[16px] leading-normal sm:leading-[unset]">
             Thought Leadership Is Our Forte!
