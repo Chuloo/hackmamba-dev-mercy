@@ -38,10 +38,10 @@ export default function Hero() {
   `);
 
   return (
-    <section className="hero-section flex max-w-[1170px] mx-auto my-0 relative">
+    <section className="hero-section sm:flex sm:max-w-[1170px] max-w-[358px] mx-auto my-0 relative">
       <div>
-        <div className="relative flex-1 min-w-[676px] h-fit">
-          <h1 className="font-headerFont max-w-[42.25rem] leading-[5rem] mt-[7.5rem] z-10 text-[4rem]">
+        <div className="relative flex-1 sm:min-w-[676px] h-fit">
+          <h1 className="font-headerFont sm:max-w-[42.25rem] sm:leading-[5rem] sm:mt-[7.5rem] z-10 sm:text-[4rem] text-[32px] leading-[40px] max-w-[358px] mt-[108px]">
             Create Superior{" "}
             <span className="span-style px-[0.906rem]">Technical Content </span>
             for Your World Changing{" "}
@@ -50,18 +50,18 @@ export default function Hero() {
           <img
             src={connection}
             alt="vector"
-            className="absolute right-0 bottom-0 translate-y-[-1.438rem] translate-x-[9px]"
+            className="absolute right-0 bottom-0 sm:translate-y-[-1.438rem] sm:w-[unset] sm:translate-x-[9px] w-[43px] translate-y-[-10px]"
           />
         </div>
         <Input />
 
-        <div className="mt-[180px]">
+        <div className="sm:mt-[180px] mt-[56px]">
           <p>We work with organisations like</p>
-          <div className="organisations flex gap-[45px] mt-[27px]">
-            <img src={saasToday} alt="logo1" />
-            <img src={askimat} alt="logo2" />
-            <img src={martino} alt="logo3" />
-            <img src={rocker} alt="logo4" />
+          <div className="organisations flex sm:gap-[45px] gap-[40px] mt-[27px] overflow-hidden sm:overflow-auto">
+            <img src={saasToday} alt="logo1" className="sm:w-[unset] w-[73px]" />
+            <img src={askimat} alt="logo2" className="sm:w-[unset] w-[100px]" />
+            <img src={martino} alt="logo3" className="sm:w-[unset] w-[100px]" />
+            <img src={rocker} alt="logo4" className="sm:w-[unset] w-[100px]" />
           </div>
         </div>
       </div>
@@ -70,12 +70,12 @@ export default function Hero() {
         <img
           src={longArrow}
           about="alt='circle"
-          className="absolute top-[-5.5rem] ml-[8.7rem] "
+          className="absolute sm:top-[-5.5rem] top:[44px] sm:ml-[8.7rem] ml-[43px] sm:h-[unset] h-[670px]"
           alt="arrow"
         />
         {data?.illustration1 ? (
           <Img
-            className="image-item w-[221px] h-[204px] ml-[76px] shadow-heroIllustration rounded-[16px] mt-[58px] z-10"
+            className="image-item w-[221px] h-[204px] sm:ml-[76px] ml-0 shadow-heroIllustration rounded-[16px] mt-[58px] z-10"
             fluid={data?.illustration1?.childImageSharp?.fluid}
             alt="image"
           />
@@ -83,7 +83,7 @@ export default function Hero() {
 
         {data?.illustration2 ? (
           <Img
-            className="image-item w-[223px] h-[216px] ml-[76px] !absolute top-[206px] right-0 shadow-heroIllustration rounded-[16px] z-10"
+            className="image-item w-[223px] h-[216px] sm:ml-[76px] !absolute sm:top-[206px] sm:right-0 shadow-heroIllustration rounded-[16px] z-10 right-0 top-[180px]"
             fluid={data?.illustration2?.childImageSharp?.fluid}
             alt="image"
           />
@@ -93,7 +93,7 @@ export default function Hero() {
 
         {data?.illustration3 ? (
           <Img
-            className="image-item w-[128px] h-[166px] ml-[76px] shadow-heroIllustration rounded-[16px] mt-[153px] left-[15px]"
+            className="image-item w-[128px] h-[166px] sm:ml-[76px] ml-0 shadow-heroIllustration rounded-[16px] sm:mt-[153px] mt-[200px] sm:left-[15px] left-0"
             fluid={data?.illustration3?.childImageSharp?.fluid}
             alt="image"
           />
@@ -102,9 +102,9 @@ export default function Hero() {
         <img
           src={vector}
           alt="vector"
-          className="absolute top-[347px] right-0"
+          className="absolute sm:top-[347px] right-0 sm:w-[unset] w-[278px] top-[353px]"
         />
-        <p className="w-[530px] pt-[152px]">
+        <p className="sm:w-[530px] sm:pt-[152px] pt-[124px] text-[18px] w-[358px]">
           We develop high-quality, authoritative technical content to assist
           your users in getting the most out of your product, decrease pain
           points, and ramp up product adoption.

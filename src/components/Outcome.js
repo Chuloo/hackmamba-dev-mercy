@@ -50,14 +50,10 @@ export default function Outcome() {
   function Folder({ content }) {
     return (
       <div className="relative">
-        <div className="folder-img w-[354px]   rounded-[24px]">
+        <div className="folder-img sm:w-[354px] w-fullrounded-[24px]">
           {content?.image ? <Img fluid={content.image} /> : null}
         </div>
-        {/* <img
-          src={untitled}
-          alt="dff"
-          className="folder-img w-[354px] bg-[linear-gradient(0deg,_#ffffff1f_0%,_#ffffff00_100%)] blur[70px] rounded-[24px]"
-        /> */}
+       
         <div className="absolute top-0 left-[24px] mt-[24px]">
           <div>
             <img
@@ -81,10 +77,10 @@ export default function Outcome() {
   }
 
   return (
-    <section className="mx-[80px] bg-productSectionBg rounded-[40px] py-[120px] px-[55px] my-[80px] relative overflow-hidden">
+    <section className="sm:mx-[80px] mx-[16px] bg-productSectionBg rounded-[40px] py-[120px] sm:px-[55px] px-[24px] my-[80px] relative overflow-hidden">
       <div className="green-gradient top-[-128px] left-[-9px] w-[350px] h-[350px] opacity-[0.2800000011920929] bg-greenGradient blur-[167px] absolute "></div>
-      <CurvedLine headingText="Focus On High-Value Outcomes" width="max-w-[441px]" />
-      <div className="flex gap-[54px] ">
+      <CurvedLine headingText="Focus On High-Value Outcomes" />
+      <div className="flex gap-[54px] sm:flex-row flex-col ">
         <FolderRow rowContent={outcomeRow} />
       </div>
     </section>

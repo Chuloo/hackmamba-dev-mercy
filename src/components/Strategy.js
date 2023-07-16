@@ -15,12 +15,12 @@ export default function Strategy() {
     }
   `);
   return (
-    <section className="max-w-[1170px] mx-[auto] mt-0 py-[160px] px-[80px] flex justify-between bg-strategyBg rounded-b-[40px]">
-      <div className="max-w-[605px]">
-        <h2 className=" text-primary mb-[20px]">
+    <section className="max-w-[1170px] sm:mx-[auto] mt-0 sm:py-[160px] py-[120px] sm:px-[80px] px-[24px] flex justify-between bg-strategyBg rounded-b-[40px] sm:flex-row flex-col mx-[40px]">
+      <div className="sm:max-w-[605px] max-w-[268px]">
+        <h2 className=" text-primary sm:mb-[20px] mb-[16px] sm:leading-[unset] leading-normal">
           Enjoy Community-Backed Content Amplification Strategy
         </h2>
-        <p>
+        <p className="text-[18px] leading-[32px]">
           High-quality content can only fly with an appropriate distribution
           strategy, and businesses will fail to fulfill their content production
           ROI. Hackmamba leverages its extensive community and partners for
@@ -29,7 +29,7 @@ export default function Strategy() {
       </div>
       <Img
         fluid={data.shield.childImageSharp.fluid}
-        className="h-[300px] w-[300px]"
+        className="h-[300px] w-[300px] sm:mt-0 mt-[32px]"
       />
     </section>
   );

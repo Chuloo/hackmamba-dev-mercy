@@ -13,7 +13,10 @@ export default function Btn({
       {slimBtn ? (
         <div className={backgroundColor + " rounded-full w-fit"}>
           <button
-            className={textColor + " text-base font-medium px-[45px] py-[12px]"}
+            className={
+              textColor +
+              "  sm:text-base font-medium px-[45px] py-[12px] !text-sm"
+            }
           >
             <div
               className={`flex items-center  ${flexItem} ${
@@ -28,7 +31,7 @@ export default function Btn({
       ) : (
         <div className={backgroundColor + " rounded-full  w-fit"}>
           <button
-            className={textColor + " text-base font-medium px-[2.7rem] py-4"}
+            className={`${textColor} sm:text-base font-medium sm:px-[2.7rem] py-4 px-[20px] text-sm`}
           >
             {text}
           </button>

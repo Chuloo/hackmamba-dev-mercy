@@ -26,6 +26,16 @@ h2 {
     font-weight: 600;
     line-height: 56px;
 }
+@media (max-width: 768px) {
+  p{
+  font-size: 16px;
+  line-height: 24px;
+  }
+  h2{
+    font-size: 32px !important;
+    }
+}
+
 
 @layer components {
 .span-style  {
@@ -46,6 +56,9 @@ h2 {
   }
   .folder-tab-style {
     @apply bg-white py-[8px] px-[30px] text-sm leading-[20px]
+  }
+  .matt-tab-style {
+    @apply mt-[100px]
   }
 
 }

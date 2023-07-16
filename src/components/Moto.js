@@ -6,20 +6,20 @@ import { Link } from "gatsby";
 export default function Moto() {
   return (
     <section className="bg-[linear-gradient(0deg,_#FFF_0%,_#ffffff00_100%)]">
-      <div className="max-w-[1010px] my-0 mx-[auto] flex justify-between pt-[121px] pb-[128px]">
+      <div className="sm:max-w-[1010px] max-w-[358px] my-0 mx-[auto] flex justify-between sm:pt-[121px]  pt-[240px] sm:pb-[128px] pb-'[120px] sm:flex-row flex-col">
         <div>
-          <h2 className="text-primary max-w-[399px] mb-[34px]">
+          <h2 className="text-primary sm:max-w-[399px] max-w-[358px] sm:mb-[34px] mb-[16px] leading-normal sm:leading-[unset]">
             Thought Leadership Is Our Forte!
           </h2>
           <p>Join the conversation on social media.</p>
         </div>
         <div className="max-w-[484px]">
-          <p className="pt-[36px]">
+          <p className="sm:pt-[36px] pt-[12px]">
             Hackmamba believes in being uniquely different. We only engage the
             finest professionals, thought leaders, and technology specialists
             from various tech stacks.
           </p>
-          <div className="flex gap-[36px] mt-[70px]">
+          <div className="flex sm:gap-[36px] gap-[50px] sm:mt-[70px] mt-[48px]">
             <Link to="#">
               <img src={twitter} alt="logo" />
             </Link>

@@ -88,7 +88,7 @@ export default function Cards() {
           <Folder content={c} />
         ))}
       </div> */}
-      <div className="mt-[80px]">
+      <div className="sm:mt-[80px] mt-[112px]">
         <FolderRow rowContent={folderRow1} />
       </div>
       <div className="mt-[48px]">
@@ -100,7 +100,7 @@ export default function Cards() {
 
 function FolderRow({ rowContent }) {
   return (
-    <div className="flex gap-[48px]">
+    <div className="sm:flex sm:gap-[48px] flex-col sm:flex-row gap-[64px]">
       {rowContent.map((eachObject) => (
         <Folder content={eachObject} />
       ))}
@@ -128,14 +128,14 @@ function Folder({ content }) {
             }`}
           />
         </div>
-        <div className="mt-[18px] ml-[40px]">
-          <h2 className="text-[32px] leading-10 max-w-[345px]">
+        <div className="sm:mt-[18px] ml-[40px] mt-[22px]">
+          <h2 className="lg:!text-[32px] !text-[24px] sm:leading-10  leading-[32px] sm:max-w-[345px] max-w-[277px]">
             {content.title}
           </h2>
 
           <p
             className={`ext-base text-white leading-6 ${
-              content.wide ? "max-w-[502px]" : "max-w-[408px]"
+              content.wide ? "sm:max-w-[502px] max-w-[277px]" : "sm:max-w-[408px] max-w-[277px]"
             }  mt-[16px]`}
           >
             {content.description}
