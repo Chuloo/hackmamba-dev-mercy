@@ -11,7 +11,7 @@ export default function SmallFolder({ title, post }) {
             <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
           </div>
 
-          <h2 className="text-primary text-base font-semibold leading-[24px] tracking-[1px] w-[309px]">
+          <h2 className="text-primary !text-base font-semibold leading-[24px] tracking-[1px] sm:max-w-[309px] max-w-[243px]">
             {post.frontmatter.title}
           </h2>
         </div>

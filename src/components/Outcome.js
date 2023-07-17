@@ -95,7 +95,7 @@ export default function Outcome() {
 
   return (
     <section className="sm:mx-[80px] mx-[16px] bg-productSectionBg rounded-[40px] py-[120px] sm:px-[55px] px-[24px] sm:my-[80px] relative overflow-hidden">
-      <div className="green-gradient top-[-128px] left-[-9px] w-[350px] h-[350px] opacity-[0.2800000011920929] bg-greenGradient blur-[167px] absolute "></div>
+      <div className="green-gradient top-[-128px] left-[-9px] w-[350px] h-[350px] opacity-[0.2800000011920929] bg-greenGradient blur-[167px] absolute sm:block hidden"></div>
       <CurvedLine headingText="Focus On High-Value Outcomes" />
 
       <div className="flex sm:gap-[54px] gap-[72px] sm:flex-row flex-col sm:mt-0 mt-[52px]">

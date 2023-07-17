@@ -46,7 +46,7 @@ export default function Blog() {
             title
             thumb {
               childImageSharp {
-                fluid {
+                fluid(quality:100) {
                   sizes
                   src
                   srcSet
@@ -72,27 +72,30 @@ export default function Blog() {
   return (
     <Layout>
       <section>
-        <div className="max-w-[1170px] mx-[auto]">
-          <div className="my-[120px] flex justify-between items-center relative">
+        <div className="sm:max-w-[1170px] mx-[auto] max-w-[358px] ">
+          <div className="sm:my-[120px] mt-[108px] mb-[71px] relative sm:flex-row flex-col">
             <div>
-              <h2 className="text-[56px] text-primary mb-[40px]">
+              <h2 className="text-[56px] text-primary sm:mb-[8px] mb-[19px] leading-[40px] sm:leading-[unset]">
                 The Hackmamba Blog
               </h2>
-              <Input btnLabel="Suscribed" />
+              <div className="flex justify-between items-center sm:flex-row flex-col-reverse">
+                <Input btnLabel="Suscribed" />
+
+                <p className="max-w-[479px] text-[18px] leading-[32px]">
+                  Risus a sit tortor vel et. Dolor velit facilisis dictum ipsum.
+                  Nisi elementum ultrices auctor amet neque. Dui feugiat ut nibh
+                  vestibulum.
+                </p>
+              </div>
             </div>
 
-            <p className="max-w-[479px] mt-[80px]">
-              Risus a sit tortor vel et. Dolor velit facilisis dictum ipsum.
-              Nisi elementum ultrices auctor amet neque. Dui feugiat ut nibh
-              vestibulum.
-            </p>
-            <div className="gradient-style top-0 right-0"></div>
+            <div className="gradient-style top-0 right-0 sm:block hidden"></div>
           </div>
           <div>
-            <h2 className="text-primary text-[40px] mb-[32px]">
+            <h2 className="text-primary sm:!text-[40px] !text-[24px] mb-[32px]">
               Featured Articles
             </h2>
-            <div className="flex justify-between">
+            <div className="flex justify-between sm:flex-row flex-col">
               <BlogFolder wide post={mainPost} />
               <div className="flex flex-col gap-[48px]">
                 {restPost.map((post) => (
@@ -104,7 +107,7 @@ export default function Blog() {
 
           <Tab text="Categories" />
 
-          <div className="grid grid-cols-3 mt-[27px] mb-[120px] gap-[32px]">
+          <div className="grid sm:grid-cols-3 grid-cols-1 sm:mt-[27px] mt-[32px] sm:mb-[120px] mb-[160px] gap-[32px]">
             {subPost.map((post) => (
               <BlogFolder post={post} />
             ))}

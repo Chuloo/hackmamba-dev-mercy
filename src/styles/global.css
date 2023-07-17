@@ -47,10 +47,10 @@ h2 {
   }
 
   .folder-style  {
-    @apply text-folderTextColor text-base leading-[30px]
+    @apply text-folderTextColor sm:text-base text-sm leading-[30px]
   }
   .tab-style  {
-    @apply py-[4px] px-[12px] bg-tabBgColor text-primary rounded-[16px] hover:bg-tabTextbgHover hover:text-tabTextColorHover text-sm cursor-pointer
+    @apply py-[4px] px-[12px] bg-tabBgColor text-primary rounded-[16px] hover:bg-tabTextbgHover hover:text-tabTextColorHover sm:text-sm cursor-pointer mix-blend-multiply text-[12px] w-fit h-fit leading-[22px]
   }
   .gradient-style {
     @apply w-[16.813rem] h-[16.813rem] opacity-[0.4000000059604645] rounded-[16.813rem] blur-[150px] absolute  mt-[1.875rem] bg-blogGradient
