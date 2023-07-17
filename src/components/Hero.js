@@ -15,21 +15,21 @@ export default function Hero() {
     query ImageQuery {
       illustration1: file(relativePath: { eq: "Illustrations01.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality:100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       illustration2: file(relativePath: { eq: "Illustrations02.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       illustration3: file(relativePath: { eq: "Illustrations03.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

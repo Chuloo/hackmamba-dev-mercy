@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import map from "../images/map.svg";
+import map2 from "../images/map2.svg";
 import prev from "../images/prev.svg";
 import next from "../images/next.svg";
 import Img from "gatsby-image";
@@ -17,10 +18,11 @@ export default function Testimonial() {
       }
     }
   `);
+
   return (
     <section className="sm:max-w-[1246px] mx-[auto] mt-[160px] max-w-[343px]">
       <div
-        className="bg-no-repeat sm:bg-contain bg-cover bg-[center_top_6rem] sm:pb-[188px] pb-[160px]"
+        className="bg-no-repeat sm:bg-contain sm:bg-[center_top_6rem] bg-[center_top_0rem] sm:pb-[188px] pb-[160px] bg-[length:1246px_779px]"
         style={{ backgroundImage: `url(${map})` }}
       >
         <div className="">
@@ -52,12 +54,12 @@ export default function Testimonial() {
             <img
               src={prev}
               alt="prev"
-              className="absolute left-[-17px] top-[50%] translate-y-[-50%] cursor-pointer"
+              className="absolute sm:left-[-17px] left-[-10px] top-[50%] translate-y-[-50%] cursor-pointer"
             />
             <img
               src={next}
               alt="next"
-              className="absolute right-[-17px] top-[50%] translate-y-[-50%] cursor-pointer"
+              className="absolute sm:right-[-17px] right-[-10px] top-[50%] translate-y-[-50%] cursor-pointer"
             />
           </div>
           <p className="text-base leading-[20px] text-center sm:mt-[32px] mt-[40px] sm:mb-[8px] mb-[15px]">

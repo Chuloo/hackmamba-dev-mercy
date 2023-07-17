@@ -52,6 +52,7 @@ module.exports = {
           "drop-shadow(0px 11px 20px rgba(148, 148, 148, 0.26))",
         contactInputShadow: "0px 15px 50px 0px rgba(21, 37, 72, 0.10)",
         communityShadow: "-5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;",
+        cardShadow: "drop-shadow(0px 4px 60px rgba(0, 0, 0, 0.08))",
       },
       backgroundImage: {
         gradientRadial:

@@ -12,7 +12,14 @@ export default function Outcome() {
     query OutcomeFolderQuery {
       outcomeFolder: file(relativePath: { eq: "outcome-folder.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      mobileFolder: file(relativePath: { eq: "vector4.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -23,6 +30,7 @@ export default function Outcome() {
     {
       icon: icon1,
       image: data.outcomeFolder.childImageSharp.fluid,
+      mobileImage: data.mobileFolder.childImageSharp.fluid,
       title: "Lean Team",
       description:
         "Maintain an efficient technical writing team. Focus on the most impactful product outcomes & delegate the rest.",
@@ -30,6 +38,7 @@ export default function Outcome() {
     {
       icon: icon2,
       image: data.outcomeFolder.childImageSharp.fluid,
+      mobileImage: data.mobileFolder.childImageSharp.fluid,
       title: "Faster Delivery",
       description:
         "Ship quality documentation, blog posts, and articles at three times the speed with fewer people to manage.",
@@ -37,6 +46,7 @@ export default function Outcome() {
     {
       icon: icon3,
       image: data.outcomeFolder.childImageSharp.fluid,
+      mobileImage: data.mobileFolder.childImageSharp.fluid,
       title: "Lower Cost",
       description:
         "Receive the support of content strategists, editors, and SEO specialists at 40% less cost.",
@@ -50,24 +60,31 @@ export default function Outcome() {
   function Folder({ content }) {
     return (
       <div className="relative">
-        <div className="folder-img sm:w-[354px] w-fullrounded-[24px]">
-          {content?.image ? <Img fluid={content.image} /> : null}
+        <div className="folder-img sm:w-[354px] w-full rounded-[24px]">
+          <>
+            {content?.image ? (
+              <Img fluid={content.image} className="sm:block hidden" />
+            ) : null}
+            {content?.image ? (
+              <Img fluid={content.mobileImage} className="block sm:hidden" />
+            ) : null}
+          </>
         </div>
-       
-        <div className="absolute top-0 left-[24px] mt-[24px]">
+
+        <div className="absolute top-0 sm:left-[24px] left-0 mt-[24px] w-full">
           <div>
             <img
               src={content.icon}
               alt="icon"
-              className="w-[60px] h-[60px] ml-auto"
+              className="w-[60px] h-[60px] ml-auto sm:translate-x-[-47px] translate-x-[-24px]"
             />
           </div>
-          <div>
-            <h2 className="text-[24px] leading-[32px] mb-[8px] mt-[19px]">
+          <div className="sm:max-w-0 max-w-[277px] m-auto">
+            <h2 className="!text-[24px] leading-[32px] mb-[8px] sm:mt-[19px] mt-[12px]">
               {content.title}
             </h2>
 
-            <p className="text-base leading-6 max-w-[306px] text-outcomePText">
+            <p className="text-base leading-6 sm:max-w-[306px]  text-outcomePText">
               {content.description}
             </p>
           </div>
@@ -80,7 +97,8 @@ export default function Outcome() {
     <section className="sm:mx-[80px] mx-[16px] bg-productSectionBg rounded-[40px] py-[120px] sm:px-[55px] px-[24px] sm:my-[80px] relative overflow-hidden">
       <div className="green-gradient top-[-128px] left-[-9px] w-[350px] h-[350px] opacity-[0.2800000011920929] bg-greenGradient blur-[167px] absolute "></div>
       <CurvedLine headingText="Focus On High-Value Outcomes" />
-      <div className="flex gap-[54px] sm:flex-row flex-col ">
+
+      <div className="flex sm:gap-[54px] gap-[72px] sm:flex-row flex-col sm:mt-0 mt-[52px]">
         <FolderRow rowContent={outcomeRow} />
       </div>
     </section>

@@ -7,7 +7,7 @@ export default function Strategy() {
     query StrategyImgQuery {
       shield: file(relativePath: { eq: "Shield.png" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

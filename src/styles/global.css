@@ -43,7 +43,7 @@ h2 {
 
 @layer components {
 .span-style  {
-    @apply bg-spanBg rounded-2xl border border-borderLine
+    @apply bg-spanBg rounded-lg border border-borderLine
   }
 
   .folder-style  {
