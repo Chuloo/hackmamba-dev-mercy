@@ -11,11 +11,11 @@ export default function Contact() {
   return (
     <Layout>
       <section
-        className="bg-no-repeat bg-contain relative mb-[100px]  bg-[center_top_3.5rem]"
+        className="bg-no-repeat bg-contain relative sm:mb-[100px] mb-[unset] bg-[center_top_3.5rem]"
         style={{ backgroundImage: `url(${map})` }}
       >
-        <div className="max-w-[1170px] mx-[auto] pt-[120px] flex justify-between">
-          <div className="mb-[60px]">
+        <div className="sm:max-w-[1170px]  max-w-[358px]  mx-[auto] pt-[120px] flex justify-between sm:flex-row flex-col">
+          <div className="sm:mb-[60px] mb-[382px]">
             <h2 className="text-primary max-w-[488px] leading-[60px] mb-[16px]">
               Hello there, how can we help you?
             </h2>
@@ -23,10 +23,10 @@ export default function Contact() {
               Contact us if you have any questions about our company or
               products. We will try to provide an answer within a few days.
             </p>
-            <div className="gradient-style top-[180px] right-[126px]"></div>
+            <div className="gradient-style top-[180px] right-[126px] sm:block hidden"></div>
           </div>
 
-          <div className="max-w-[513px] p-[56px] bg-white shadow-contactInputShadow rounded-[24px] flex flex-col gap-[32px] absolute right-[135px] top-[120px]">
+          <div className="sm:max-w-[513px] w-[358px] sm:w-[unset] sm:p-[56px] px-[16px] pt-[40px] pb-[48px] bg-white shadow-contactInputShadow rounded-[24px] flex flex-col gap-[32px] absolute sm:right-[135px] sm:top-[120px] top-[380px]">
             <div>
               <p className="text-contactTextColor2 text-base mb-[14px]">
                 Full name *
@@ -35,7 +35,7 @@ export default function Contact() {
                 placeholder="Julia William"
                 type="text"
                 name="text"
-                className=" w-[401px] pt-[17px] pl-[20px] pb-[11px] placeholder:text-[16px] placeholder:text-contactTextColor border border-contactBorder rounded-[8px]"
+                className=" sm:w-[401px] w-full pt-[17px] pl-[20px] pb-[11px] placeholder:text-[16px] placeholder:text-contactTextColor border border-contactBorder rounded-[8px]"
               />
             </div>
             <div>
@@ -46,7 +46,7 @@ export default function Contact() {
                 placeholder="you@example.com"
                 type="email"
                 name="email"
-                className=" w-[401px] pt-[17px] pl-[20px] pb-[11px] placeholder:text-[16px] placeholder:text-contactTextColor border border-contactBorder rounded-[8px]"
+                className=" sm:w-[401px] w-full pt-[17px] pl-[20px] pb-[11px] placeholder:text-[16px] placeholder:text-contactTextColor border border-contactBorder rounded-[8px]"
               />
             </div>
             <div>
@@ -57,7 +57,7 @@ export default function Contact() {
                 placeholder="UI Designer"
                 type="text"
                 name="text"
-                className=" w-[401px] pt-[17px] pl-[20px] pb-[11px] placeholder:text-[16px] placeholder:text-contactTextColor border border-contactBorder rounded-[8px]"
+                className=" sm:w-[401px] w-full pt-[17px] pl-[20px] pb-[11px] placeholder:text-[16px] placeholder:text-contactTextColor border border-contactBorder rounded-[8px]"
               />
             </div>
             <div>
@@ -68,7 +68,7 @@ export default function Contact() {
                 placeholder="How can we help you"
                 type="text"
                 name="text"
-                className=" w-[401px] pt-[17px] pl-[20px] pb-[11px] placeholder:text-[16px] placeholder:text-contactTextColor border border-contactBorder rounded-[8px] resize-none h-[137px]"
+                className=" sm:w-[401px] w-full pt-[17px] pl-[20px] pb-[11px] placeholder:text-[16px] placeholder:text-contactTextColor border border-contactBorder rounded-[8px] resize-none h-[137px]"
               ></textarea>
             </div>
 
@@ -82,10 +82,10 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="bg-productSectionBg pt-[80px] pb-[116px] pl-[135px] pr-[50px] flex justify-between items-center">
+        <div className="bg-productSectionBg sm:pt-[80px] pt-[528px] pb-[116px] sm:pl-[135px] sm:pr-[50px] flex justify-between items-center sm:flex-row flex-col">
           <img src={contactUs} alt="image" />
-          <div>
-            <img src={twitter} alt="image" className="mb-[24px]" />
+          <div className="flex sm:flex-col flex-row sm:gap-[24px] gap-[32px] mt-[120px] sm:m-[unset]">
+            <img src={twitter} alt="image" className="" />
             <img src={linkedin} alt="image" />
           </div>
         </div>
