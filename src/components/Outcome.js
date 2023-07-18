@@ -79,7 +79,7 @@ export default function Outcome() {
               className="w-[60px] h-[60px] ml-auto sm:translate-x-[-47px] translate-x-[-24px]"
             />
           </div>
-          <div className="sm:max-w-0 max-w-[277px] m-auto">
+          <div className="sm:max-w-[unset] max-w-[277px] m-auto">
             <h2 className="!text-[24px] leading-[32px] mb-[8px] sm:mt-[19px] mt-[12px]">
               {content.title}
             </h2>

@@ -77,13 +77,13 @@ export default function Community() {
   return (
     <Layout>
       <section className="relative">
-        <div className="flex  max-w-[1170px] mx-[auto]  ">
-          <div className="pt-[120px] pb-[262px]">
-            <h2 className="text-primary max-w-[580px] text-[64px] leading-[80px]">
+        <div className="flex sm:max-w-[1170px] max-w-[358px] mx-[auto] sm:flex-row flex-col">
+          <div className="sm:pt-[120px] pt-[108px] sm:pb-[262px] pb-[143px]">
+            <h2 className="text-primary max-w-[580px] text-[64px] sm:leading-[80px] leading-[40px]">
               Join Our Technical Writing{" "}
               <span className="span-style px-[10px]">Community</span>
             </h2>
-            <p className="max-w-[587px] mt-[16px]">
+            <p className="max-w-[587px] mt-[16px] text-[18px] leading-[32px]">
               Do you have an interest in technical writing? Join our community
               of aspiring and veteran technical writers to network, get
               mentorship, and advance your technical writing career.
@@ -97,14 +97,14 @@ export default function Community() {
               />
             </div>
           </div>
-          <div className="w-[150px] ml-[145px]">
+          {/* <div className="w-[150px] ml-[145px]">
             <img src={logo} alt="logo" className="w-[100%] mt-[238px]" />
-          </div>
-          <div className="absolute top-[-56px] w-[516px] right-[178px] z-[-10]">
+          </div> */}
+          <div className="absolute top-[-56px] w-[516px] right-[178px] z-[-10] sm:block hidden">
             <img src={base} alt="img" />
           </div>
 
-          <div className="absolute flex flex-col w-[516px] right-0">
+          {/* <div className="absolute flex flex-col w-[516px] right-0">
             <Img
               fluid={data?.item1?.childImageSharp?.fluid}
               className="w-[100px] mt-[15px] ml-[-60px]"
@@ -127,14 +127,14 @@ export default function Community() {
               fluid={data?.item4?.childImageSharp?.fluid}
               className="w-[130px] mt-[3px] ml-[-45px]"
             />
-          </div>
+          </div> */}
         </div>
 
         <div
           className="bg-productSectionBg  bg-cover bg-no-repeat pt-[120px] relative"
           style={{ backgroundImage: `url(${texture})` }}
         >
-          <div className="max-w-[1170px] mx-[auto]">
+          {/* <div className="max-w-[1170px] mx-[auto]">
             <div className="w-[866px]">
               <CurvedLine
                 headingText="Why you should join our community"
@@ -152,10 +152,10 @@ export default function Community() {
                 rightPosition="top-[814px]"
               />
             </div>
-          </div>
+          </div> */}
         </div>
 
-        <div className="mt-[160px] max-w-[1170px] mx-[auto]">
+        {/* <div className="mt-[160px] max-w-[1170px] mx-[auto]">
           <Tab text="Community Events" />
 
           <div className="grid grid-cols-3 gap-[32px] mt-[57px] mb-[160px]">
@@ -163,8 +163,8 @@ export default function Community() {
               <CommunityFolder post={post} />
             ))}
           </div>
-        </div>
-        <div className="bg-productSectionBg  relative">
+        </div> */}
+        {/* <div className="bg-productSectionBg  relative">
           <div className="flex gap-[48px] max-w-[1170px] mx-[auto] translate-x-[30px] py-[80px]">
             <Info
               title="Join Our Technical Writing Community"
@@ -187,7 +187,7 @@ export default function Community() {
             />
           </div>
           <div></div>
-        </div>
+        </div> */}
       </section>
     </Layout>
   );
