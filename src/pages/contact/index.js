@@ -83,10 +83,10 @@ export default function Contact() {
         </div>
 
         <div className="bg-productSectionBg sm:pt-[80px] pt-[528px] pb-[116px] sm:pl-[135px] sm:pr-[50px] flex justify-between items-center sm:flex-row flex-col">
-          <img src={contactUs} alt="image" />
+          <img src={contactUs} alt="img" />
           <div className="flex sm:flex-col flex-row sm:gap-[24px] gap-[32px] mt-[120px] sm:m-[unset]">
-            <img src={twitter} alt="image" className="" />
-            <img src={linkedin} alt="image" />
+            <img src={twitter} alt="img" className="" />
+            <img src={linkedin} alt="img" />
           </div>
         </div>
       </section>

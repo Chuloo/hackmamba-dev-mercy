@@ -105,10 +105,10 @@ export default function Community() {
         <div className="w-[132px] h-[180px] bg-white opacity-[0.30000001192092896] absolute top-[410px] right-[-23px] blur-[132px]"></div>
 
         <div className="text-white  mx-[auto] absolute sm:top-[50%] sm:translate-x-[-50%] sm:left-[50%] sm:translate-y-[-50%] top-0 sm:mt-[65px] mt-[224px] w-full">
-          <h2 className="mx-[auto] sm:max-w-[629px] max-w-[286px] text-center sm:mb-[16px] mb-[32px] sm:leading-[unset] leading-[40px]">
+          <h2 className="mx-[auto] sm:max-w-[629px] max-w-[286px] text-center sm:mb-[16px] mb-[32px] sm:leading-[56px] leading-[40px]">
             Join Our Technical Writing Community
           </h2>
-          <p className="text-center sm:mb-[88px] mb-[48px] text-white sm:max-w-[602px] m-[auto] max-w-[273px] leading-[32px] sm:leading-[unset]">
+          <p className="text-center sm:mb-[88px] mb-[48px] text-white sm:max-w-[602px] m-[auto] max-w-[273px] leading-[32px] sm:leading-[32px]">
             Do you have an interest in technical writing? Join our community of
             aspiring and veteran technical writers to network, get mentorship,
             and advance your technical writing career.

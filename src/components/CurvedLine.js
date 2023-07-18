@@ -10,7 +10,7 @@ export default function CurvedLine({ headingText, headingWidth }) {
       <img src={curvedLine2} alt="line" className="lg:hidden sm:translate-y-0 translate-y-[76px] sm:translate-x-0 translate-x-[45px]"  />
       <div className="flex sm:gap-[80px] gap-[75px] absolute sm:top-[-75px] top-0 left-0 sm:flex-row flex-col">
         <img src={tick} alt="img" className="sm:w-[unset] w-[80px] sm:ml-0 ml-[10px]" />
-        <h2 className={headingWidth + "sm:p-[24px] py-[24px] px-[14px] bg-subColor rounded-[24px] sm:max-w-[441px] max-w-[310px]"}>
+        <h2 className={headingWidth + " sm:p-[24px] py-[24px] px-[14px] bg-subColor rounded-[24px] sm:max-w-[441px] max-w-[358px] sm:leading-[56px] leading-[40px]"}>
           {headingText}
         </h2>
       </div>

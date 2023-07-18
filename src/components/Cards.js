@@ -170,7 +170,7 @@ function Folder({ content }) {
           <img
             src={content?.icon}
             alt="icon"
-            className={`ml-[auto] sm:mt-[32px] mt-[24px] mr-[24px] sm:mr-[unset]  ${
+            className={`ml-[auto] sm:mt-[32px] mt-[24px] mr-[24px] sm:mr-[32px]  ${
               content.wide ? "sm:translate-x-[60px]" : "sm:translate-x-[10px]"
             }`}
           />

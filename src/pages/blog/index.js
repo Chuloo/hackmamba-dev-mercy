@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import React from "react";
 import Layout from "../../components/Layout";
 import Input from "../../components/Input";
@@ -7,63 +7,7 @@ import SmallFolder from "../../components/SmallFolder";
 import Community from "../../components/Community";
 import Tab from "../../components/Tab";
 
-export default function Blog() {
-  const data = useStaticQuery(graphql`
-    query BlogQuery {
-      featuredTrue: allMarkdownRemark(
-        filter: { frontmatter: { featured: { eq: true } } }
-        limit: 4
-        sort: { frontmatter: { date: ASC } }
-      ) {
-        nodes {
-          frontmatter {
-            author
-            desc
-            publish
-            slug
-            title
-            thumb {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          id
-        }
-      }
-
-      featuredFalse: allMarkdownRemark(
-        filter: { frontmatter: { featured: { eq: false } } }
-      ) {
-        nodes {
-          frontmatter {
-            author
-            desc
-            publish
-            slug
-            title
-            thumb {
-              childImageSharp {
-                fluid(quality:100) {
-                  sizes
-                  src
-                  srcSet
-                  srcSetWebp
-                  srcWebp
-                  tracedSVG
-                  aspectRatio
-                }
-              }
-            }
-          }
-          id
-        }
-      }
-    }
-  `);
-
+export default function Blog({ data }) {
   const mainPost = [...data?.featuredTrue?.nodes].shift();
   const restPost = [...data?.featuredTrue?.nodes].slice(1);
 
@@ -118,3 +62,59 @@ export default function Blog() {
     </Layout>
   );
 }
+
+export const query = graphql`
+  query BlogQuery {
+    featuredTrue: allMarkdownRemark(
+      filter: { frontmatter: { featured: { eq: true } } }
+      limit: 4
+      sort: { frontmatter: { date: ASC } }
+    ) {
+      nodes {
+        frontmatter {
+          author
+          desc
+          publish
+          slug
+          title
+          thumb {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        id
+      }
+    }
+
+    featuredFalse: allMarkdownRemark(
+      filter: { frontmatter: { featured: { eq: false } } }
+    ) {
+      nodes {
+        frontmatter {
+          author
+          desc
+          publish
+          slug
+          title
+          thumb {
+            childImageSharp {
+              fluid(quality: 100) {
+                sizes
+                src
+                srcSet
+                srcSetWebp
+                srcWebp
+                tracedSVG
+                aspectRatio
+              }
+            }
+          }
+        }
+        id
+      }
+    }
+  }
+`;

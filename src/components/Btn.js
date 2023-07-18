@@ -15,7 +15,7 @@ export default function Btn({
           <button
             className={
               textColor +
-              "  sm:text-base font-medium px-[45px] py-[12px] !text-sm"
+              "  sm:text-base font-medium px-[45px] py-[13px] !text-sm"
             }
           >
             <div
@@ -31,7 +31,7 @@ export default function Btn({
       ) : (
         <div className={backgroundColor + " rounded-full  w-fit"}>
           <button
-            className={`${textColor} sm:text-base font-medium sm:px-[2.7rem] py-4 px-[20px] text-sm`}
+            className={`${textColor} sm:text-base font-medium sm:px-[2.7rem] py-[13px] px-[20px] text-sm`}
           >
             {text}
           </button>

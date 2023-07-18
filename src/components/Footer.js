@@ -10,8 +10,8 @@ import connection3 from "../images/connection3.svg";
 export default function Footer() {
   return (
     <section>
-      <div className="max-w-[1170px] mx-[auto] sm:p-[80px] py-[80px] rounded-[40px] bg-strategyBg translate-y-[160px]">
-        <div className="sm:max-w-[unset] sm:m-[unset] max-w-[342px] m-auto ">
+      <div className="sm:max-w-[1170px] max-w-[358px] mx-[auto] sm:p-[80px] py-[80px] rounded-[40px] bg-strategyBg translate-y-[160px]">
+        <div className="sm:max-w-[unset] sm:m-[unset] max-w-[327px] m-auto ">
           <h2 className="text-[56px] leading-[80px] max-w-[813px] text-primary sm:block hidden">
             Managing a business is hard enough, let us handle{" "}
             <span className="span-style px-4">your </span>
@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="absolute top-[193px] left-[331px] hidden sm:block">
             <img src={connection2} alt="img" className="sm:block hidden" />
           </div>
-          <div className="absolute top-[166px] left-[168px]">
+          <div className="absolute top-[166px] left-[167px]">
             <img src={connection3} alt="img" className="sm:hidden block" />
           </div>
 

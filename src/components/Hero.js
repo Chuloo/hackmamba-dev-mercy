@@ -15,21 +15,21 @@ export default function Hero() {
     query ImageQuery {
       illustration1: file(relativePath: { eq: "Illustrations01.png" }) {
         childImageSharp {
-          fluid(quality:100) {
+          fluid(quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       illustration2: file(relativePath: { eq: "Illustrations02.png" }) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       illustration3: file(relativePath: { eq: "Illustrations03.png" }) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -58,7 +58,11 @@ export default function Hero() {
         <div className="sm:mt-[180px] mt-[56px]">
           <p>We work with organisations like</p>
           <div className="organisations flex sm:gap-[45px] gap-[40px] mt-[27px] overflow-hidden sm:overflow-auto">
-            <img src={saasToday} alt="logo1" className="sm:w-[unset] w-[73px]" />
+            <img
+              src={saasToday}
+              alt="logo1"
+              className="sm:w-[unset] w-[73px]"
+            />
             <img src={askimat} alt="logo2" className="sm:w-[unset] w-[100px]" />
             <img src={martino} alt="logo3" className="sm:w-[unset] w-[100px]" />
             <img src={rocker} alt="logo4" className="sm:w-[unset] w-[100px]" />

@@ -12,41 +12,42 @@ export default function Outcome() {
     query OutcomeFolderQuery {
       outcomeFolder: file(relativePath: { eq: "outcome-folder.png" }) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       mobileFolder: file(relativePath: { eq: "vector4.png" }) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 90) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `);
+
   const outcomeRow = [
     {
       icon: icon1,
-      image: data.outcomeFolder.childImageSharp.fluid,
-      mobileImage: data.mobileFolder.childImageSharp.fluid,
+      image: data?.outcomeFolder?.childImageSharp?.fluid,
+      mobileImage: data?.mobileFolder?.childImageSharp?.fluid,
       title: "Lean Team",
       description:
         "Maintain an efficient technical writing team. Focus on the most impactful product outcomes & delegate the rest.",
     },
     {
       icon: icon2,
-      image: data.outcomeFolder.childImageSharp.fluid,
-      mobileImage: data.mobileFolder.childImageSharp.fluid,
+      image: data?.outcomeFolder?.childImageSharp?.fluid,
+      mobileImage: data?.mobileFolder?.childImageSharp?.fluid,
       title: "Faster Delivery",
       description:
         "Ship quality documentation, blog posts, and articles at three times the speed with fewer people to manage.",
     },
     {
       icon: icon3,
-      image: data.outcomeFolder.childImageSharp.fluid,
-      mobileImage: data.mobileFolder.childImageSharp.fluid,
+      image: data?.outcomeFolder?.childImageSharp?.fluid,
+      mobileImage: data?.mobileFolder?.childImageSharp?.fluid,
       title: "Lower Cost",
       description:
         "Receive the support of content strategists, editors, and SEO specialists at 40% less cost.",
@@ -60,7 +61,7 @@ export default function Outcome() {
   function Folder({ content }) {
     return (
       <div className="relative">
-        <div className="folder-img sm:w-[354px] w-full rounded-[24px]">
+        <div className="folder-img sm:w-[354px] w-full rounded-[24px] cffff">
           <>
             {content?.image ? (
               <Img fluid={content.image} className="sm:block hidden" />
@@ -94,7 +95,7 @@ export default function Outcome() {
   }
 
   return (
-    <section className="sm:mx-[80px] mx-[16px] bg-productSectionBg rounded-[40px] py-[120px] sm:px-[55px] px-[24px] sm:my-[80px] relative overflow-hidden">
+    <section className="sm:mx-[80px] mx-[16px] bg-productSectionBg rounded-[40px] py-[120px] sm:px-[55px] px-[24px] sm:my-[80px] relative overflow-hidden sm:overflow-visible">
       <div className="green-gradient top-[-128px] left-[-9px] w-[350px] h-[350px] opacity-[0.2800000011920929] bg-greenGradient blur-[167px] absolute sm:block hidden"></div>
       <CurvedLine headingText="Focus On High-Value Outcomes" />
 

@@ -26,7 +26,7 @@ export default function Testimonial() {
         style={{ backgroundImage: `url(${map})` }}
       >
         <div className="">
-          <h2 className="sm:max-w-[489px] max-w-[358px] mx-[auto] text-center text-primary leading-[32px] sm:leading-[unset]">
+          <h2 className="sm:max-w-[489px] max-w-[358px] mx-[auto] text-center text-primary leading-[32px] sm:leading-[56px]">
             Don’t just take our word for it
           </h2>
           <p className=" max-w-[489px] mx-[auto] text-center mt-[24px] text-base">
