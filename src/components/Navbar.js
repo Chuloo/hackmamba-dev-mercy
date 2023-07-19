@@ -37,6 +37,9 @@ export default function Navbar() {
             <li className="hover:text-primary">
               <Link to="/community">Community</Link>
             </li>
+            <li className="hover:text-primary">
+              <Link to="/pricing">Pricing</Link>
+            </li>
           </ul>
 
           <Link
