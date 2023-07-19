@@ -1,11 +1,20 @@
 import { Link } from "gatsby";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../images/logo.svg";
 import Btn from "./Btn";
 import hamburger from "../images/hamburger.svg";
+import { useLocation } from "@reach/router";
 
 export default function Navbar() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash === "#about") {
+      setMenuIsOpen(false);
+    }
+  }, [location]);
+
   return (
     <div className="Navbar-container sm:max-w-[1170px] max-w-[358px] my-0 mx-auto  pt-8 text-sm relative">
       <nav className="flex items-center justify-between ">
@@ -37,7 +46,7 @@ export default function Navbar() {
             <li className="hover:text-primary">
               <Link to="/community">Community</Link>
             </li>
-            <li className="hover:text-primary">
+            <li className="hover:text-primary sm:mt-0 mt-[2.69rem]">
               <Link to="/pricing">Pricing</Link>
             </li>
           </ul>

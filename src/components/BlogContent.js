@@ -10,7 +10,7 @@ import Info from "./Info";
 import session from "../images/session.svg";
 import contactus2 from "../images/contactus2.svg";
 
-export default function BlogContent({ post }) {
+export default function BlogContent() {
   const data = useStaticQuery(graphql`
     query BlogDetailsQuery($slug: String) {
       markdownRemark(
@@ -21,6 +21,7 @@ export default function BlogContent({ post }) {
           title
           publish
           author
+          nextPost
           featuredImg {
             childImageSharp {
               fluid {
@@ -34,19 +35,26 @@ export default function BlogContent({ post }) {
   `);
 
   const { html } = data?.markdownRemark;
-  const { title, publish, author, featuredImg } =
+  const { title, publish, author, featuredImg, nextPost } =
     data?.markdownRemark?.frontmatter;
+
+  console.log(nextPost, "nextpost");
 
   return (
     <section>
       <div className="flex gap-[116px] mt-[120px] sm:max-w-[unset] max-w-[358px] mx-[auto]">
         <div className="sm:mr-[116px] sm:ml-[200px] sm:max-w-[722px]">
-          <h2 className="sm:text-[40px] text-primary sm:leading-[56px] text-[32px] leading-[40px]">{title}</h2>
+          <h2 className="sm:text-[40px] text-primary sm:leading-[56px] text-[32px] leading-[40px]">
+            {title}
+          </h2>
           <div className="mt-[32px] mb-[40px]">
             <Img fluid={featuredImg.childImageSharp.fluid} />
           </div>
 
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <div
+            className="blog-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
 
           {/* <BlogFolder /> */}
         </div>
@@ -70,6 +78,9 @@ export default function BlogContent({ post }) {
           </div>
         </div>
       </div>
+
+      {/* <BlogFolder /> */}
+      {nextPost}
 
       <div className="bg-productSectionBg relative mt-[160px]">
         <div className="flex gap-[48px] sm:max-w-[1170px]  mx-[auto] py-[80px] sm:flex-row flex-col">

@@ -31,6 +31,24 @@ html {
   scroll-behavior: smooth;
 }
 
+.blog-content ul{
+  list-style: disc;
+  font-size: 18px;
+ font-style: normal;
+ font-weight: 500;
+ line-height: 32px;
+ padding-left: 15px;
+}
+
+.blog-content h2{
+color: #12141D;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px;
+letter-spacing: 1px;
+}
+
 
 
 @media (max-width: 768px) {
@@ -47,7 +65,7 @@ html {
 
 @layer components {
 .span-style  {
-    @apply bg-spanBg rounded-lg border border-borderLine
+    @apply bg-spanBg rounded-2xl border border-borderLine
   }
 
   .folder-style  {

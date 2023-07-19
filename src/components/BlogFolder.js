@@ -6,6 +6,7 @@ import Img from "gatsby-image";
 import folder from '../images/thumbs/folder1.png'
 
 export default function BlogFolder({ wide, post }) {
+  console.log(post, 'post')
   const data = useStaticQuery(graphql`
     query AvatarQuery {
       file(relativePath: { eq: "avatar.png" }) {
@@ -33,19 +34,19 @@ export default function BlogFolder({ wide, post }) {
                 <div className="bg-folderBgColor py-[16px] pl-[24px] pr-[13px] border-t-2 backdrop-blur-[12px] border-borderFolderBgColor-500 absolute bottom-[0] left-0 sm:w-[698px] w-full ">
                   <div className="flex justify-between">
                     <p className="folder-style z-10 sm:text-base text-sm">
-                      {post.frontmatter.author}
+                      {post?.frontmatter.author}
                     </p>
                     <p className="folder-style z-10 sm:text-base text-sm">
-                      {post.frontmatter.publish}
+                      {post?.frontmatter.publish}
                     </p>
                   </div>
                 </div>
               </div>
               <h2 className="sm:!text-[32px] !text-[24px] sm:leading-[42px] leading-[32px] tracking-[1px] text-primary sm:mt-[40px] mb-[16px] mt-[24px]">
-                {post.frontmatter.title}
+                {post?.frontmatter.title}
               </h2>
               <p className="text-folderTextColor leading-[24px] text-base">
-                {post.frontmatter.desc}
+                {post?.frontmatter.desc}
               </p>
             </div>
           </div>

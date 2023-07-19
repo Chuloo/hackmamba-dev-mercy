@@ -8,7 +8,6 @@ import { useLocation } from "@reach/router";
 export default function Product() {
   const location = useLocation();
   const aboutRef = useRef(null);
-  console.log(location);
 
   useEffect(() => {
     if (location.hash === "#about") {
