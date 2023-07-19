@@ -27,6 +27,10 @@ h2 {
     line-height: 56px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 
 @media (max-width: 768px) {

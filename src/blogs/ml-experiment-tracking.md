@@ -16,21 +16,22 @@ In practice, having some infrastructural setup, which can be referred to as a �
 
 This often requires engineers to design and build an architecture for the workbench that best suits their workflow with external and in-house tools—which is outside the scope of this article. However, a typical workflow for this development stage will demonstrate how a specific problem might affect the workflow design and how the solution would play out with an out-of-the-box workbench.
 
-Here, we’ll implement the experimentation workflow using [DagsHub](https://dagshub.com/??utm_medium=hackmamba-blog), [Google Colab](https://colab.research.google.com/), [MLflow](https://mlflow.org/), and [Data version control (DVC)](https://dvc.org/). We’ll focus on how to do this without diving deep into the technicalities of building or designing a workbench from scratch. Going that route might increase the complexity involved, especially if you are in the early stages of understanding ML workflows, just working on a small project, or trying to implement a proof of concept.
+Here, we’ll implement the experimentation workflow using <span style="color: #874FFF;">[DagsHub](https://dagshub.com/??utm_medium=hackmamba-blog)</span>, <span style="color: #874FFF;">[Google Colab](https://colab.research.google.com/)</span>, <span style="color: #874FFF;">[MLflow](https://mlflow.org/)</span>, and <span style="color: #874FFF;">[Data version control (DVC)](https://dvc.org/)</span>. We’ll focus on how to do this without diving deep into the technicalities of building or designing a workbench from scratch. Going that route might increase the complexity involved, especially if you are in the early stages of understanding ML workflows, just working on a small project, or trying to implement a proof of concept.
 
 ## Prerequisites
 
 The following are required to follow along with this article comfortably:
 
 - A basic understanding of ML
-- A DagsHub account
-- You will need to connect your GitHub repository to DagsHub. This blog will show you how. This makes it possible to seamlessly version control your workflows with both GitHub and DagsHub, giving you the extra capabilities DagsHub provides and are necessary for ML workflows.
+
+* A DagsHub account
+* You will need to connect your GitHub repository to DagsHub. This blog will show you how. This makes it possible to seamlessly version control your workflows with both GitHub and DagsHub, giving you the extra capabilities DagsHub provides and are necessary for ML workflows.
   You can find the code for this project in this repository.
   In this article, you will:
-- Use DagYard to set up remote environments on Google Colab
-- Version data with DVC and store it in DagsHub storage
-- Train and track model experiments with MLflow on Google Colab
-- Understand how use cases drive the ML development process
+* Use DagYard to set up remote environments on Google Colab
+* Version data with DVC and store it in DagsHub storage
+* Train and track model experiments with MLflow on Google Colab
+* Understand how use cases drive the ML development process
 
 ## Case study: Train a model to translate alphabets to sign languages
 
@@ -44,6 +45,8 @@ Have a remote workbench setup with better computing power to enable faster and e
 Note: There is a rich option of tools to pick from for every step in this article. The individual functionality and integration of these tools/platforms made implementing this use case easy.
 
 The workflow architecture for the out-of-the-box workbench looks like this:
+
+![Imageeeeeee](../images/md1.png)
 
 ## What is DagYard
 

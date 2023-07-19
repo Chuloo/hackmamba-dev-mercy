@@ -15,7 +15,7 @@ export default function Hero() {
     query ImageQuery {
       illustration1: file(relativePath: { eq: "Illustrations01.png" }) {
         childImageSharp {
-          fluid(quality: 90) {
+          fluid(quality: 80){
             ...GatsbyImageSharpFluid
           }
         }
@@ -36,6 +36,8 @@ export default function Hero() {
       }
     }
   `);
+
+  console.log(data, 'hero')
 
   return (
     <section className="hero-section sm:flex sm:max-w-[1170px] max-w-[358px] mx-auto my-0 relative">

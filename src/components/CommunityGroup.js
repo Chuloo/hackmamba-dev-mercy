@@ -6,7 +6,7 @@ import Img from "gatsby-image";
 export default function CommunityGroup({ flexReverse }) {
   const data = useStaticQuery(graphql`
     query CommunityQuery {
-      file(relativePath: { eq: "img-gradient.png" }) {
+      file(relativePath: { eq: "gradient.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid

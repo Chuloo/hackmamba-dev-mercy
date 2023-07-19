@@ -29,7 +29,7 @@ export default function Navbar() {
         >
           <ul className="sm:flex gap-[2.69rem]">
             <li className="sm:ml-[3rem] hover:text-primary">
-              <Link to="/about">About</Link>
+              <Link to="/#about">About</Link>
             </li>
             <li className=" hover:text-primary my-[2.69rem] sm:my-0">
               <Link to="/blog">Blog</Link>

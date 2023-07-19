@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import texture from "../images/texture.png";
 import union from "../images/union.svg";
 import union2 from "../images/union2.svg";
 import Cards from "./Cards";
+import { useLocation } from "@reach/router";
 
 export default function Product() {
+  const location = useLocation();
+  const aboutRef = useRef(null);
+  console.log(location);
+
+  useEffect(() => {
+    if (location.hash === "#about") {
+      aboutRef.current.scrollIntoView();
+    }
+  }, [location]);
+
   return (
     <section
+      id="about"
+      ref={aboutRef}
       className="bg-productSectionBg rounded-[40px] sm:mt-[200px] mt-[180px] mx-[8px] sm:px-[111px] px-0 sm:py-[200px] py-[100px] bg-cover bg-no-repeat relative"
       style={{ backgroundImage: `url(${texture})` }}
     >

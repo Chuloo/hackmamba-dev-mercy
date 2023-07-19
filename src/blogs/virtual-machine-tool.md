@@ -12,17 +12,18 @@ date: 2021-02-01T00:00:00+00:00
 
 This blog is part two of a two-part series introducing experiment tracking in machine learning (ML). Here, we cover the practical implementation of experiment tracking using a platform-based tool. Here's [part one](https://hackmamba.io/blog/2022/12/how-to-track-and-analyze-experiments-in-machine-learning-a-beginner-s-guide/) covering an introduction on how to track and analyze experiments in Machine Learning.
 
+
 In practice, having some infrastructural setup, which can be referred to as a “workbench,” within the development pipeline is the way to go. It structures the workflow, but this is easier said than done. Although some cloud platforms have provided various out-of-the-box workbench platforms/services (like [Vertex AI](https://cloud.google.com/vertex-ai-workbench), [Sagemaker](https://aws.amazon.com/sagemaker/), [AzureML](https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2)) ready for use, it doesn’t always cover all the use cases.
 
 This often requires engineers to design and build an architecture for the workbench that best suits their workflow with external and in-house tools—which is outside the scope of this article. However, a typical workflow for this development stage will demonstrate how a specific problem might affect the workflow design and how the solution would play out with an out-of-the-box workbench.
 
-Here, we’ll implement the experimentation workflow using [DagsHub](https://dagshub.com/??utm_medium=hackmamba-blog), [Google Colab](https://colab.research.google.com/), [MLflow](https://mlflow.org/), and [Data version control (DVC)](https://dvc.org/). We’ll focus on how to do this without diving deep into the technicalities of building or designing a workbench from scratch. Going that route might increase the complexity involved, especially if you are in the early stages of understanding ML workflows, just working on a small project, or trying to implement a proof of concept.
+Here, we’ll implement the experimentation workflow using <span style="color: #874FFF;">[DagsHub](https://dagshub.com/??utm_medium=hackmamba-blog)</span>, <span style="color: #874FFF;">[Google Colab](https://colab.research.google.com/)</span>, <span style="color: #874FFF;">[MLflow](https://mlflow.org/)</span>, and <span style="color: #874FFF;">[Data version control (DVC)](https://dvc.org/)</span>. We’ll focus on how to do this without diving deep into the technicalities of building or designing a workbench from scratch. Going that route might increase the complexity involved, especially if you are in the early stages of understanding ML workflows, just working on a small project, or trying to implement a proof of concept.
 
 ## Prerequisites
 
 The following are required to follow along with this article comfortably:
 
-- A basic understanding of ML
+* A basic understanding of ML
 - A DagsHub account
 - You will need to connect your GitHub repository to DagsHub. This blog will show you how. This makes it possible to seamlessly version control your workflows with both GitHub and DagsHub, giving you the extra capabilities DagsHub provides and are necessary for ML workflows.
   You can find the code for this project in this repository.
@@ -44,6 +45,8 @@ Have a remote workbench setup with better computing power to enable faster and e
 Note: There is a rich option of tools to pick from for every step in this article. The individual functionality and integration of these tools/platforms made implementing this use case easy.
 
 The workflow architecture for the out-of-the-box workbench looks like this:
+
+![Imageeeeeee](../images/md1.png)
 
 ## What is DagYard
 
