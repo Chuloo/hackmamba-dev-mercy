@@ -4,6 +4,7 @@ import map from "../../images/map2.svg";
 import twitter from "../../images/twitter2.svg";
 import linkedin from "../../images/linkedin2.svg";
 import contactUs from "../../images/contactus.svg";
+import arrowHead from "../../images/arrowhead.svg";
 import envelope from "../../images/env.svg";
 import Btn from "../../components/Btn";
 
@@ -26,7 +27,7 @@ export default function Contact() {
             <div className="gradient-style top-[180px] right-[126px] sm:block hidden"></div>
           </div>
 
-          <div className="sm:max-w-[513px] w-[358px] sm:w-[unset] sm:p-[56px] px-[16px] pt-[40px] pb-[48px] bg-white shadow-contactInputShadow rounded-[24px] flex flex-col gap-[32px] absolute sm:right-[135px] sm:top-[120px] top-[380px]">
+          <div className="sm:max-w-[513px] w-[358px] sm:w-[unset] sm:p-[56px] px-[16px] pt-[40px] pb-[48px] bg-white shadow-contactInputShadow rounded-[24px] flex flex-col gap-[32px] absolute sm:right-[135px] sm:top-[120px] top-[380px] z-10">
             <div>
               <p className="text-contactTextColor2 text-base mb-[14px]">
                 Full name *
@@ -82,8 +83,12 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="bg-productSectionBg sm:pt-[80px] pt-[528px] pb-[116px] sm:pl-[135px] sm:pr-[50px] flex justify-between items-center sm:flex-row flex-col">
-          <img src={contactUs} alt="img" />
+        <div className="bg-productSectionBg sm:pt-[80px] pt-[528px] pb-[116px] sm:pl-[135px] sm:pr-[50px] flex justify-between items-center sm:flex-row flex-col relative">
+          <div>
+            <img src={contactUs} alt="img" />
+            <div className="w-[40vw] h-[3px] bg-contactLine absolute top-[255px] left-[346px]"></div>
+            <img src={arrowHead} alt="img" className="absolute top-[242px] left-[780px]" />
+          </div>
           <div className="flex sm:flex-col flex-row sm:gap-[24px] gap-[32px] mt-[120px] sm:m-[unset]">
             <img src={twitter} alt="img" className="" />
             <img src={linkedin} alt="img" />

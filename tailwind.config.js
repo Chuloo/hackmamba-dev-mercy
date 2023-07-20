@@ -39,6 +39,7 @@ module.exports = {
         contactBorder: "#DFE3EF",
         contactPlaceholder: "#ACB8D0",
         contactInputText: "#5A7184",
+        contactLine: "#57526D",
         communityFolderText: "#475467",
         communityFolderText2: "#874FFF",
         navBarTextColor: "#8B8B8B",

@@ -14,20 +14,20 @@ import orangeTick from "../../images/orange-tick.svg";
 export default function Pricing() {
   return (
     <Layout>
-      <section className="relatiove">
-        <div className="text-center max-w-[587px] mx-[auto] mt-[120px] mb-[80px]">
-          <h2 className="text-[64px] leading-[80px] text-primary mb-[32px]">
+      <section className="relative">
+        <div className="text-center sm:max-w-[587px] max-w-[358px] mx-[auto] sm:mt-[120px] mt-[108px] sm:mb-[80px] mb-[48px]">
+          <h2 className="text-[64px] sm:leading-[80px] text-primary sm:mb-[32px] mb-[16px] leading-[40px]">
             Pricing built for all{" "}
             <span className="span-style px-[10px]">sizes</span>
           </h2>
-          <p>
+          <p className="text-[18px]">
             Risus urna malesuada dolor velit sollicitudin quisque in, Et mattis
             donec a venenatis vestibulum elit nunc enim{" "}
           </p>
           <div className="gradient-style top-[180px] right-[135px] sm:block hidden"></div>
         </div>
 
-        <div className="max-w-[1200px] mx-[auto] flex">
+        <div className="sm:max-w-[1200px] max-w-[358px] mx-[auto] flex sm:flex-row flex-col gap-[32px] sm:gap-0">
           <PricingFee
             icon={<img src={icon1} alt="icon" />}
             text="This is a perfect plan for starters"
@@ -35,11 +35,11 @@ export default function Pricing() {
             num="10,000"
             num2="1"
             num3="1"
-            rounded="rounded-l-2xl"
+            rounded="sm:rounded-l-2xl rounded-[16px]"
             price="$0"
             month="/monthly"
           />
-          <div className="mt-[-32px]">
+          <div className="sm:mt-[-32px]">
             <PricingFee
               icon={<img src={icon2} alt="icon" />}
               text="This is a perfect plan for starters"
@@ -60,7 +60,7 @@ export default function Pricing() {
             num="$1/10,000 events"
             num2="$5/project"
             num3=" $5/team member"
-            rounded="rounded-r-2xl"
+            rounded="sm:rounded-r-2xl rounded-[16px]"
             price="Custom"
           />
         </div>

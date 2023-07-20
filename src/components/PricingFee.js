@@ -1,6 +1,5 @@
 import React from "react";
 import line from "../images/line.svg";
-import dashedArrow from "../images/dashed-arrow.svg";
 
 export default function PricingFee({
   icon,
@@ -18,7 +17,7 @@ export default function PricingFee({
     <section className=" cursor-pointer">
       {height ? (
         <div className={` group bg-pricingFeeBg  w-fit ${rounded} pb-[32px]`}>
-          <div className="head-wrapper group-hover:bg-pricinghoverbg group-hover:rounded-t-[16px] px-[32px] pt-[64px]  ">
+          <div className="head-wrapper group-hover:bg-pricinghoverbg group-hover:sm:rounded-t-[16px] px-[32px] pt-[64px]  ">
             <div className="flex gap-[16px] items-center mb-[24px]">
               <div>{icon}</div>
               <div>
@@ -31,7 +30,7 @@ export default function PricingFee({
             <p className="text-[14px] text-pricingFeeText3 mb-[25px]">{text}</p>
             <div className="flex items-center gap-[10px] mb-[26px]">
               <h2 className="text-primary">{price}</h2>
-              <p className="text-pricingFeeText3 mt-[15px]">{month}</p>
+              <p className="text-pricingFeeText3">{month}</p>
             </div>
 
             <div className="">
@@ -73,7 +72,7 @@ export default function PricingFee({
               </div>
             </div>
 
-            <div className="flex items-center justify-between py-[12px] pl-[24px] pr-[17px] bg-white rounded-[1000px] border-2 border-pricingFeeborder mt-[74px] group-hover:bg-secondary ">
+            <div className="flex items-center justify-between py-[12px] pl-[24px] pr-[17px] bg-white rounded-[1000px] border-2 border-pricingFeeborder sm:mt-[74px] mt-[42px] group-hover:bg-secondary ">
               <p className="text-base group-hover:text-white">Get Started</p>
               <svg
                 width="79"
@@ -128,7 +127,7 @@ export default function PricingFee({
             <p className="text-[14px] text-pricingFeeText3 mb-[25px]">{text}</p>
             <div className="flex items-center gap-[10px] mb-[26px]">
               <h2 className="text-primary">{price}</h2>
-              <p className="text-pricingFeeText3 mt-[15px]">{month}</p>
+              <p className="text-pricingFeeText3">{month}</p>
             </div>
 
             <div className="">

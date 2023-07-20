@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import map from "../images/map.svg";
-import map2 from "../images/map2.svg";
 import prev from "../images/prev.svg";
 import next from "../images/next.svg";
 import Img from "gatsby-image";
