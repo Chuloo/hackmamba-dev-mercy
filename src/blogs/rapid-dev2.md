@@ -3,7 +3,7 @@ title: Rapid development on AWS EKS using Garden
 desc: Risus a sit tortor vel et. Dolor velit facilisis dictum ipsum. Nisi elementum ultrices...
 author: Authors Name
 publish: Publish Date
-slug: rapid-development
+slug: rapid-development-2
 thumb: ../images/thumbs/folder6.png
 featuredImg: ../images/featured/featured-img.png
 featured: false

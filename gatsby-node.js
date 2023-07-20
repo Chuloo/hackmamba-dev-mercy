@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allMarkdownRemark {
         nodes {
           frontmatter {
+            nextPost
             slug
           }
         }
@@ -13,12 +14,14 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-
-  data.allMarkdownRemark.nodes.forEach((node) => {
+  data.allMarkdownRemark.nodes.forEach(async (node) => {
     actions.createPage({
       path: "/blog/" + node.frontmatter.slug,
       component: path.resolve("./src/templates/blog-details.js"),
-      context: { slug: node.frontmatter.slug },
+      context: { 
+        slug: node.frontmatter.slug, 
+        nextPostSlug: node.frontmatter.nextPost
+      },
     });
   });
 };

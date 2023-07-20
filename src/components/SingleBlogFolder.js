@@ -1,11 +1,9 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import arrow from "../images/arrow.svg";
-import { Link } from "gatsby";
 import Img from "gatsby-image";
-import folder from "../images/thumbs/folder1.png";
+import arrow from "../images/arrow.svg";
 
-export default function BlogFolder({ wide, post }) {
+export default function SingleBlogFolder({ post }) {
   const data = useStaticQuery(graphql`
     query AvatarQuery {
       file(relativePath: { eq: "avatar.png" }) {
@@ -19,37 +17,9 @@ export default function BlogFolder({ wide, post }) {
   `);
 
   return (
-    <section>
-      <Link to={`/blog/${post?.frontmatter.slug}`} key={post?.id}>
-        {wide ? (
-          <div>
-            <div className="max-w-[698px] mb-[48px] sm:mb-[unset]">
-              <div className="relative">
-                <div>
-                  <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
-                  {/* <img src={folder} alt="dd"/> */}
-                </div>
-
-                <div className="bg-folderBgColor py-[16px] pl-[24px] pr-[13px] border-t-2 backdrop-blur-[12px] border-borderFolderBgColor-500 absolute bottom-[0] left-0 sm:w-[698px] w-full ">
-                  <div className="flex justify-between">
-                    <p className="folder-style z-10 sm:text-base text-sm">
-                      {post?.frontmatter.author}
-                    </p>
-                    <p className="folder-style z-10 sm:text-base text-sm">
-                      {post?.frontmatter.publish}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <h2 className="sm:!text-[32px] !text-[24px] sm:leading-[42px] leading-[32px] tracking-[1px] text-primary sm:mt-[40px] mb-[16px] mt-[24px]">
-                {post?.frontmatter.title}
-              </h2>
-              <p className="text-folderTextColor leading-[24px] text-base">
-                {post?.frontmatter.desc}
-              </p>
-            </div>
-          </div>
-        ) : (
+    <Link to={`/blog/${post?.frontmatter.slug}`} key={post?.id} >
+      <section>
+        <div>
           <div>
             <div className="max-w-[342px] sm:m-[unset] mx-auto relative ">
               <Img fluid={post?.frontmatter.thumb?.childImageSharp.fluid} />
@@ -81,8 +51,8 @@ export default function BlogFolder({ wide, post }) {
               </div>
             </div>
           </div>
-        )}
-      </Link>
-    </section>
+        </div>
+      </section>
+    </Link>
   );
 }

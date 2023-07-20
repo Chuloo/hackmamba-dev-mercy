@@ -16,7 +16,7 @@ export default function Contact() {
         style={{ backgroundImage: `url(${map})` }}
       >
         <div className="sm:max-w-[1170px]  max-w-[358px]  mx-[auto] pt-[120px] flex justify-between sm:flex-row flex-col">
-          <div className="sm:mb-[60px] mb-[382px]">
+          <div className="sm:mb-[60px] mb-[48px]">
             <h2 className="text-primary max-w-[488px] leading-[60px] mb-[16px]">
               Hello there, how can we help you?
             </h2>
@@ -27,7 +27,7 @@ export default function Contact() {
             <div className="gradient-style top-[180px] right-[126px] sm:block hidden"></div>
           </div>
 
-          <div className="sm:max-w-[513px] w-[358px] sm:w-[unset] sm:p-[56px] px-[16px] pt-[40px] pb-[48px] bg-white shadow-contactInputShadow rounded-[24px] flex flex-col gap-[32px] absolute sm:right-[135px] sm:top-[120px] top-[380px] z-10">
+          <div className="sm:max-w-[513px] w-[358px] sm:w-[unset] sm:p-[56px] px-[16px] pt-[40px] pb-[48px] bg-white shadow-contactInputShadow rounded-[24px] flex flex-col gap-[32px] z-10">
             <div>
               <p className="text-contactTextColor2 text-base mb-[14px]">
                 Full name *
@@ -83,15 +83,21 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="bg-productSectionBg sm:pt-[80px] pt-[528px] pb-[116px] sm:pl-[135px] sm:pr-[50px] flex justify-between items-center sm:flex-row flex-col relative">
-          <div>
-            <img src={contactUs} alt="img" />
-            <div className="w-[40vw] h-[3px] bg-contactLine absolute top-[255px] left-[346px]"></div>
-            <img src={arrowHead} alt="img" className="absolute top-[242px] left-[780px]" />
-          </div>
-          <div className="flex sm:flex-col flex-row sm:gap-[24px] gap-[32px] mt-[120px] sm:m-[unset]">
-            <img src={twitter} alt="img" className="" />
-            <img src={linkedin} alt="img" />
+        <div className="bg-productSectionBg sm:pt-[80px] pt-[528px] pb-[116px] relative sm:mt-[-465px] mt-[-375px] overflow-hidden">
+          <div className="flex justify-between items-center sm:flex-row flex-col sm:max-w-[1170px] sm:mx-[auto]">
+            <div className="">
+              <img src={contactUs} alt="img" />
+              <div className="w-[40vw] h-[3px] bg-contactLine absolute top-[255px] left-[346px]"></div>
+              <img
+                src={arrowHead}
+                alt="img"
+                className="absolute top-[242px] left-[780px]"
+              />
+            </div>
+            <div className="flex sm:flex-col flex-row sm:gap-[24px] gap-[32px] mt-[120px] sm:m-[unset] sm:mr-[-95px]">
+              <img src={twitter} alt="img" className="" />
+              <img src={linkedin} alt="img" />
+            </div>
           </div>
         </div>
       </section>

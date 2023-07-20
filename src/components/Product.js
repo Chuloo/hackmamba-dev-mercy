@@ -19,14 +19,14 @@ export default function Product() {
     <section
       id="about"
       ref={aboutRef}
-      className="bg-productSectionBg rounded-[40px] sm:mt-[200px] mt-[180px] mx-[8px] sm:px-[111px] px-0 sm:py-[200px] py-[100px] bg-cover bg-no-repeat relative"
+      className="bg-productSectionBg rounded-[40px] sm:mt-[200px] mt-[180px] mx-[8px]  px-0 sm:py-[200px] py-[100px] bg-cover bg-no-repeat relative"
       style={{ backgroundImage: `url(${texture})` }}
     >
-      <div className="max-w-[310px] m-auto sm:max-w-[unset] sm:m-[unset]">
+      <div className="max-w-[310px] mx-auto sm:max-w-[1170px] ">
         <img
           src={union}
           alt="arrow"
-          className="absolute left-[111px] top-[248px] sm:block hidden"
+          className="absolute  top-[248px] sm:block hidden"
         />
         <img
           src={union2}

@@ -3,10 +3,10 @@ import Layout from "../components/Layout";
 
 import BlogContent from "../components/BlogContent";
 
-export default function BlogDetails() {
+export default function BlogDetails(props) {
   return (
     <Layout>
-      <BlogContent />
+      <BlogContent {...props} />
     </Layout>
   );
 }

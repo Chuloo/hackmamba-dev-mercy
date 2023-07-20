@@ -24,7 +24,6 @@ export default function Info({ title, desc, Icon, textBtn }) {
     }
   `);
 
-  console.log(data, "imgee");
 
   return (
     <div className="sm:max-w-[1170px] max-w-[358px] mx-[auto]">

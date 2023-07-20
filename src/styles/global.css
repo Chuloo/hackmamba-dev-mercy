@@ -51,6 +51,8 @@ letter-spacing: 1px;
 
 
 
+
+
 @media (max-width: 768px) {
   p{
   font-size: 16px;
@@ -60,6 +62,13 @@ letter-spacing: 1px;
     font-size: 32px !important;
     }
     
+    .blog-content h2{
+      font-size: 24px !important;
+      line-height: 32px !important;
+      }
+      .head-wrapper{
+        border-radius: 16px !important;
+      }
 }
 
 

@@ -35,7 +35,7 @@ export default function Pricing() {
             num="10,000"
             num2="1"
             num3="1"
-            rounded="sm:rounded-l-2xl rounded-[16px]"
+            rounded="left"
             price="$0"
             month="/monthly"
           />
@@ -47,7 +47,6 @@ export default function Pricing() {
               num="10,000"
               num2="1"
               num3="4"
-              rounded="rounded-2xl"
               price="$35"
               month="/monthly"
               height
@@ -60,7 +59,7 @@ export default function Pricing() {
             num="$1/10,000 events"
             num2="$5/project"
             num3=" $5/team member"
-            rounded="sm:rounded-r-2xl rounded-[16px]"
+            rounded="right"
             price="Custom"
           />
         </div>

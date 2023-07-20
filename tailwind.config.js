@@ -51,6 +51,7 @@ module.exports = {
         pricingFeeText4: "#000624",
         pricingFeeborder: "#12141d1a",
         pricinghoverbg: "var(--support-success-500, #E9F9F1)",
+        
       },
       boxShadow: {
         heroIllustration:
@@ -63,7 +64,7 @@ module.exports = {
         communityShadow: "-5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;",
         cardShadow: "drop-shadow(0px 4px 60px rgba(0, 0, 0, 0.08))",
         pricingFeeShadow:
-          "0px 4px 20px -2px rgba(50, 50, 71, 0.08), 0px 2px 4px 0px rgba(12, 26, 75, 0.04)",
+          "0px 2px 2px 2px rgba(12, 26, 75, 0.04)",
       },
       backgroundImage: {
         gradientRadial:

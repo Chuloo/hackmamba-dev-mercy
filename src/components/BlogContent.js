@@ -9,19 +9,20 @@ import BlogFolder from "./BlogFolder";
 import Info from "./Info";
 import session from "../images/session.svg";
 import contactus2 from "../images/contactus2.svg";
+import SingleBlogFolder from "./SingleBlogFolder";
 
-export default function BlogContent() {
+export default function BlogContent(props) {
   const data = useStaticQuery(graphql`
-    query BlogDetailsQuery($slug: String) {
-      markdownRemark(
-        frontmatter: { slug: { eq: $slug }, featured: { eq: true } }
+    query BlogDetailsQuery($slug: String, $nextPostSlug: String) {
+      post: markdownRemark(
+        frontmatter: { slug: { eq: $slug }, featured: { eq: false } }
       ) {
         html
         frontmatter {
           title
           publish
           author
-          nextPost
+          slug
           featuredImg {
             childImageSharp {
               fluid {
@@ -31,19 +32,65 @@ export default function BlogContent() {
           }
         }
       }
+      nextPost: markdownRemark(
+        frontmatter: { slug: { eq: $nextPostSlug }, featured: { eq: false } }
+      ) {
+        frontmatter {
+          title
+          publish
+          author
+          slug
+          thumb {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+
+      relatedPost: allMarkdownRemark(
+        filter: { frontmatter: { featured: { eq: false } } }
+        limit: 3
+      ) {
+        nodes {
+          frontmatter {
+            author
+            desc
+            publish
+            slug
+            title
+            thumb {
+              childImageSharp {
+                fluid(quality: 100) {
+                  sizes
+                  src
+                  srcSet
+                  srcSetWebp
+                  srcWebp
+                  tracedSVG
+                  aspectRatio
+                }
+              }
+            }
+          }
+          id
+        }
+      }
     }
   `);
 
-  const { html } = data?.markdownRemark;
-  const { title, publish, author, featuredImg, nextPost } =
-    data?.markdownRemark?.frontmatter;
+  const { html } = data?.post;
+  const { title, publish, author, featuredImg } = data?.post?.frontmatter;
+  const post = data?.relatedPost?.nodes;
 
-  console.log(nextPost, "nextpost");
+  console.log(data?.nextPost);
 
   return (
     <section>
-      <div className="flex gap-[116px] mt-[120px] sm:max-w-[unset] max-w-[358px] mx-[auto]">
-        <div className="sm:mr-[116px] sm:ml-[200px] sm:max-w-[722px]">
+      <div className="flex  mt-[120px] sm:max-w-[1040px] max-w-[358px] mx-[auto]">
+        <div className="sm:mr-[116px] sm:max-w-[722px]">
           <h2 className="sm:text-[40px] text-primary sm:leading-[56px] text-[32px] leading-[40px]">
             {title}
           </h2>
@@ -60,6 +107,8 @@ export default function BlogContent() {
         </div>
 
         <div className="sm:block hidden">
+          <div className="gradient-style top-[262px] right-[135px] sm:block hidden"></div>
+
           <div className="mb-[96px]">
             <img src={avatar} alt="img" className="w-[40px]" />
             <p>{author}</p>
@@ -79,8 +128,19 @@ export default function BlogContent() {
         </div>
       </div>
 
-      {/* <BlogFolder /> */}
-      {nextPost}
+      <div className="sm:max-w-[1040px] mx-[auto] sm:mt-[160px] max-w-[358px] mt-[56px]">
+        <h2 className="text-primary text-[40px] mb-[10px]">Related Blogs</h2>
+
+        <div className=" grid sm:grid-cols-3 grid-cols-1 gap-[32px] ">
+          {/* for next post */}
+          {/* {data?.nextPost ? <BlogFolder post={data?.nextPost} /> : null}
+        {data?.nextPost ? <BlogFolder post={data?.nextPost} /> : null}
+        {data?.nextPost ? <BlogFolder post={data?.nextPost} /> : null} */}
+          {post.map((post) => (
+            <SingleBlogFolder post={post} />
+          ))}
+        </div>
+      </div>
 
       <div className="bg-productSectionBg relative mt-[160px]">
         <div className="flex gap-[48px] sm:max-w-[1170px]  mx-[auto] py-[80px] sm:flex-row flex-col">
