@@ -22,7 +22,7 @@ export default function SingleBlogFolder({ post }) {
         <div>
           <div>
             <div className="max-w-[342px] sm:m-[unset] mx-auto relative ">
-              <Img fluid={post?.frontmatter.thumb?.childImageSharp.fluid} />
+              <Img fluid={post?.frontmatter.thumb?.childImageSharp.fluid} className="w-[342px]"  />
               <div className="w-[40px] absolute top-[21px] right-[24px]">
                 <Img fluid={data.file.childImageSharp.fluid} />
               </div>

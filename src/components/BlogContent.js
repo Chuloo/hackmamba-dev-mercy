@@ -5,7 +5,6 @@ import avatar from "../images/avatar.png";
 import facebook from "../images/facebook-purple.svg";
 import twitter from "../images/twitter-purple.svg";
 import linkedin from "../images/facebook-purple.svg";
-import BlogFolder from "./BlogFolder";
 import Info from "./Info";
 import session from "../images/session.svg";
 import contactus2 from "../images/contactus2.svg";
@@ -95,7 +94,7 @@ export default function BlogContent(props) {
             {title}
           </h2>
           <div className="mt-[32px] mb-[40px]">
-            <Img fluid={featuredImg.childImageSharp.fluid} />
+            <Img fluid={featuredImg.childImageSharp.fluid}/>
           </div>
 
           <div
@@ -103,7 +102,6 @@ export default function BlogContent(props) {
             dangerouslySetInnerHTML={{ __html: html }}
           />
 
-          {/* <BlogFolder /> */}
         </div>
 
         <div className="sm:block hidden">

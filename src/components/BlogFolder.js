@@ -3,7 +3,6 @@ import React from "react";
 import arrow from "../images/arrow.svg";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
-import folder from "../images/thumbs/folder1.png";
 
 export default function BlogFolder({ wide, post }) {
   const data = useStaticQuery(graphql`
@@ -27,7 +26,6 @@ export default function BlogFolder({ wide, post }) {
               <div className="relative">
                 <div>
                   <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
-                  {/* <img src={folder} alt="dd"/> */}
                 </div>
 
                 <div className="bg-folderBgColor py-[16px] pl-[24px] pr-[13px] border-t-2 backdrop-blur-[12px] border-borderFolderBgColor-500 absolute bottom-[0] left-0 sm:w-[698px] w-full ">
@@ -52,7 +50,10 @@ export default function BlogFolder({ wide, post }) {
         ) : (
           <div>
             <div className="max-w-[342px] sm:m-[unset] mx-auto relative ">
-              <Img fluid={post?.frontmatter.thumb?.childImageSharp.fluid} />
+              <Img
+                fluid={post?.frontmatter.thumb?.childImageSharp.fluid}
+                className="w-[342px]"
+              />
               <div className="w-[40px] absolute top-[21px] right-[24px]">
                 <Img fluid={data.file.childImageSharp.fluid} />
               </div>

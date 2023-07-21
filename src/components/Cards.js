@@ -141,12 +141,6 @@ function FolderRow({ rowContent }) {
 }
 
 function Folder({ content }) {
-  const style = {
-    // Adding media query..
-    "@media (max-width: 720px)": {
-      display: "none",
-    },
-  };
   return (
     <div
       className={`flex-1 bg-cover bg-no-repeat relative ${
