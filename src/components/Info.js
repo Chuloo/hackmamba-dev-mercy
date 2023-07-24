@@ -44,7 +44,6 @@ export default function Info({ title, desc, Icon, textBtn }) {
           </h2>
           <p className="text-white sm:mb-[32px] mb-[24px] sm:max-w-[unset] max-w-[302px]">{desc}</p>
           <Btn
-            slimBtn
             text={textBtn || "Join Our Community"}
             backgroundColor="bg-communityBg"
             Icon={<img src={arrow2} alt="icon" />}

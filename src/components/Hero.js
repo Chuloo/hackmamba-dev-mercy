@@ -80,7 +80,7 @@ export default function Hero() {
         />
         {data?.illustration1 ? (
           <Img
-            className="image-item w-[221px] h-[204px] sm:ml-[76px] ml-0 shadow-heroIllustration rounded-[16px] mt-[58px] z-10"
+            className="image-item w-[221px] h-[204px] sm:ml-[76px] ml-0 shadow-heroIllustration rounded-[16px] mt-[58px] z-10 illustration1"
             fluid={data?.illustration1?.childImageSharp?.fluid}
             alt="image"
           />

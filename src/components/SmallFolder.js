@@ -7,7 +7,7 @@ export default function SmallFolder({ title, post }) {
     <section>
       <Link to={post.frontmatter.slug} key={post.id}>
         <div className="grid grid-cols-[99px_309px] gap-[16px]">
-          <div>
+          <div className="hover:translate-y-[-5px] ease-in duration-300">
             <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
           </div>
 

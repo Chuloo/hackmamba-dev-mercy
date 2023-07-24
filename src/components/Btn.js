@@ -9,9 +9,9 @@ export default function Btn({
   flexItem,
 }) {
   return (
-    <div>
+    <div className="hover:translate-y-[-3px] ease-in duration-300">
       {slimBtn ? (
-        <div className={backgroundColor + " rounded-full w-fit"}>
+        <div className={backgroundColor + " rounded-full w-fit "}>
           <button
             className={
               textColor +
@@ -23,17 +23,33 @@ export default function Btn({
                 flexItem ? "gap-[9px]" : "gap-[16px]"
               }`}
             >
-              {Icon}
               {text}
+              {Icon && (
+                <div className="icon">
+                  {/* <Icon /> */}
+                  {Icon}
+                </div>
+              )}
             </div>
           </button>
         </div>
       ) : (
         <div className={backgroundColor + " rounded-full  w-fit"}>
           <button
-            className={`${textColor} sm:text-base font-medium sm:px-[2.7rem] py-[13px] px-[20px] text-sm`}
+            className={`${textColor} sm:text-base font-medium sm:px-[2.7rem] py-[16px] px-[20px] text-sm`}
           >
-            {text}
+            <div
+              className={`flex items-center gap-[16px]
+              }`}
+            >
+              {text}
+              {Icon && (
+                <div className="icon">
+                  {/* <Icon /> */}
+                  {Icon}
+                </div>
+              )}
+            </div>
           </button>
         </div>
       )}
