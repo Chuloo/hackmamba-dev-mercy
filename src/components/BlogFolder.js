@@ -18,12 +18,12 @@ export default function BlogFolder({ wide, post }) {
   `);
 
   return (
-    <section>
+    <section className="hover:translate-y-[-12px] ease-in duration-300">
       <Link to={`/blog/${post?.frontmatter.slug}`} key={post?.id}>
         {wide ? (
           <div>
             <div className="max-w-[698px] mb-[48px] sm:mb-[unset]">
-              <div className="hover:translate-y-[-5px] ease-in duration-300">
+              <div>
                 <div className="relative">
                   <div>
                     <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
@@ -52,7 +52,7 @@ export default function BlogFolder({ wide, post }) {
         ) : (
           <div>
             <div className="max-w-[342px] sm:m-[unset] mx-auto relative ">
-              <div className="hover:translate-y-[-5px] ease-in duration-300">
+              <div>
                 <Img
                   fluid={post?.frontmatter.thumb?.childImageSharp.fluid}
                   className="w-[342px]"

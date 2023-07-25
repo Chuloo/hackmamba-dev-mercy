@@ -18,11 +18,11 @@ export default function SingleBlogFolder({ post }) {
 
   return (
     <Link to={`/blog/${post?.frontmatter.slug}`} key={post?.id}>
-      <section>
+      <section className="hover:translate-y-[-16px] ease-in duration-300">
         <div>
           <div>
             <div className="max-w-[342px] sm:m-[unset] mx-auto relative ">
-              <div className="hover:translate-y-[-5px] ease-in duration-300">
+              <div>
                 <Img
                   fluid={post?.frontmatter.thumb?.childImageSharp.fluid}
                   className="w-[342px]"

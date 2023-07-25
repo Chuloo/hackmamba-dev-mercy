@@ -4,10 +4,10 @@ import Img from "gatsby-image";
 
 export default function SmallFolder({ title, post }) {
   return (
-    <section>
+    <section className="hover:translate-y-[-5px] ease-in duration-300">
       <Link to={post.frontmatter.slug} key={post.id}>
         <div className="grid grid-cols-[99px_309px] gap-[16px]">
-          <div className="hover:translate-y-[-5px] ease-in duration-300">
+          <div>
             <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
           </div>
 

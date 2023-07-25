@@ -48,6 +48,22 @@ html {
   letter-spacing: 1px;
 }
 
+.tab-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-scroll{
+  -ms-overflow-style: none;
+}
+
+/* .illustration1-hidden{
+  opacity: 0;
+}
+
+.show{
+  opacity: 1;
+} */
+
 @media (max-width: 768px) {
   p {
     font-size: 16px;
