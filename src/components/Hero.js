@@ -9,6 +9,7 @@ import saasToday from "../images/saastoday.svg";
 import askimat from "../images/askimat.svg";
 import martino from "../images/martino.svg";
 import rocker from "../images/rocker.svg";
+import Typewriter from "./Typewriter";
 
 export default function Hero() {
   const data = useStaticQuery(graphql`
@@ -37,20 +38,6 @@ export default function Hero() {
     }
   `);
 
-  // const illustration1Ref = useRef(null);
-  // const observer = new IntersectionObserver((entries) => {
-  //   entries.forEach((entry) => {
-  //     console.log(entry);
-  //     if (entry.isIntersecting) {
-  //       entry.target.classList.add("show");
-  //     } else {
-  //       entry.target.classList.remove("show");
-  //     }
-  //   });
-  // });
-
-  
-
   useEffect(() => {});
 
   return (
@@ -59,9 +46,11 @@ export default function Hero() {
         <div className="relative flex-1 sm:min-w-[676px] h-fit">
           <h1 className="font-headerFont sm:max-w-[42.25rem] sm:leading-[5rem] sm:mt-[7.5rem] z-10 sm:text-[4rem] text-[32px] leading-[40px] max-w-[358px] mt-[108px]">
             Create Superior{" "}
-            <span className="span-style px-[0.906rem]">Technical Content </span>
+            <span className="span-style px-[0.906rem] relative block w-fit">
+              <Typewriter value="Technical Content" />{" "}
+            </span>
             for Your World Changing{" "}
-            <span className="span-style px-4">Products</span>{" "}
+            <span className="span-style px-4 relative"><Typewriter value="Products" /></span>{" "}
           </h1>
           <img
             src={connection}
@@ -95,16 +84,15 @@ export default function Hero() {
         />
         {data?.illustration1 ? (
           <Img
-            className="image-item w-[221px] h-[204px] sm:ml-[76px] ml-0 shadow-heroIllustration rounded-[16px] mt-[58px] z-10 illustration1-hidden"
+            className="image-item w-[221px] h-[204px] sm:ml-[76px] ml-0 shadow-heroIllustration rounded-[16px] mt-[58px] z-10 illustration1-hidden fadeDown"
             fluid={data?.illustration1?.childImageSharp?.fluid}
             alt="image"
-            // ref={illustration1Ref}
           />
         ) : null}
 
         {data?.illustration2 ? (
           <Img
-            className="image-item w-[223px] h-[216px] sm:ml-[76px] !absolute sm:top-[206px] sm:right-0 shadow-heroIllustration rounded-[16px] z-10 right-0 top-[180px]"
+            className="image-item w-[223px] h-[216px] sm:ml-[76px] !absolute sm:top-[206px] sm:right-0 shadow-heroIllustration rounded-[16px] z-10 right-0 top-[180px] fadeLeft"
             fluid={data?.illustration2?.childImageSharp?.fluid}
             alt="image"
           />
@@ -114,7 +102,7 @@ export default function Hero() {
 
         {data?.illustration3 ? (
           <Img
-            className="image-item w-[128px] h-[166px] sm:ml-[76px] ml-0 shadow-heroIllustration rounded-[16px] sm:mt-[153px] mt-[200px] sm:left-[15px] left-0"
+            className="image-item w-[128px] h-[166px] sm:ml-[76px] ml-0 shadow-heroIllustration rounded-[16px] sm:mt-[153px] mt-[200px] sm:left-[15px] left-0 fadeUp"
             fluid={data?.illustration3?.childImageSharp?.fluid}
             alt="image"
           />
