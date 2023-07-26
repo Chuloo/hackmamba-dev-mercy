@@ -1,0 +1,76 @@
+.swiper-button-prev,
+.swiper-button-next {
+  top: 60% !important;
+  opacity: 0;
+}
+.swiper-button-next {
+  transform: translateX(-213px);
+}
+.swiper-button-disabled {
+  opacity: 0 !important;
+}
+
+.swiper-button-prev {
+  transform: translateX(213px);
+}
+
+.fadeDown {
+  animation-name: fadeDown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.fadeUp {
+  animation-name: fadeUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.fadeLeft {
+  animation-name: fadeLeft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* @keyframes fadeRigt{
+    0% {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  } */

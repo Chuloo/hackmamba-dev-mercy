@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 @import "/src/font/WEB/css/clash-display.css";
+@import "/src/styles/animation.css";
 
 @tailwind base;
 @tailwind components;
@@ -101,64 +102,3 @@ html {
     @apply mt-[100px];
   }
 }
-
-.fadeDown {
-  animation-name: fadeDown;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.fadeUp {
-  animation-name: fadeUp;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-.fadeLeft {
-  animation-name: fadeLeft;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-200px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(200px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes fadeLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(200px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-/* @keyframes fadeRigt{
-  0% {
-    opacity: 0;
-    transform: translateX(-200px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-} */
