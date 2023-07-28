@@ -61,7 +61,7 @@ export default function Community() {
     const path3 = anime.path(".path2");
     const path4 = anime.path(".path2");
     const path5 = anime.path(".path1");
-    const path6 = anime.path(".path3");
+    const path6 = anime.path(".path3", 100);
 
     anime({
       targets: ".item1",
@@ -69,7 +69,7 @@ export default function Community() {
       translateY: path("y"),
       // rotate: path("angle"),
       easing: "linear",
-      duration: 10000,
+      duration: 20000,
       loop: true,
     });
 
@@ -79,7 +79,7 @@ export default function Community() {
       translateY: path2("y"),
       // rotate: path("angle"),
       easing: "linear",
-      duration: 9000,
+      duration: 15000,
       loop: true,
     });
     anime({
@@ -88,7 +88,7 @@ export default function Community() {
       translateY: path3("y"),
       // rotate: path("angle"),
       easing: "linear",
-      duration: 11000,
+      duration: 17000,
       loop: true,
     });
     anime({
@@ -97,7 +97,7 @@ export default function Community() {
       translateY: path4("y"),
       // rotate: path("angle"),
       easing: "linear",
-      duration: 13000,
+      duration: 25000,
       loop: true,
     });
     anime({
@@ -106,7 +106,7 @@ export default function Community() {
       translateY: path5("y"),
       // rotate: path("angle"),
       easing: "linear",
-      duration: 14000,
+      duration: 13000,
       loop: true,
     });
     anime({
@@ -115,7 +115,7 @@ export default function Community() {
       translateY: path6("y"),
       // rotate: path("angle"),
       easing: "linear",
-      duration: 16000,
+      duration: 12000,
       loop: true,
     });
   }, []);
@@ -201,7 +201,7 @@ export default function Community() {
 
           <Img
             fluid={data.item1.childImageSharp.fluid}
-            className="sm:w-[130px] w-[60px] !absolute item1 top-[-65px] left-[-65px] origin-center rotate-[45]"
+            className="sm:w-[130px] w-[60px] !absolute item1 top-[-55px] left-[-65px] origin-center rotate-[45]"
           />
 
           <Img
