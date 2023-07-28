@@ -56,6 +56,11 @@ html {
 .tab-scroll {
   -ms-overflow-style: none;
 }
+.base-bg{
+  width: 1084px;
+  height: 0 auto;
+  
+}
 
 @media (max-width: 768px) {
   p {

@@ -4,10 +4,12 @@ import union from "../images/union.svg";
 import union2 from "../images/union2.svg";
 import Cards from "./Cards";
 import { useLocation } from "@reach/router";
+// import { JellyScroll } from "jelly-scroll";
 
 export default function Product() {
   const location = useLocation();
   const aboutRef = useRef(null);
+  // JellyScroll
 
   useEffect(() => {
     if (location.hash === "#about") {
@@ -42,7 +44,7 @@ export default function Product() {
           enable better user decision-making.
         </p>
 
-        <div className="">
+        <div className="" id="productCard">
           <Cards />
         </div>
       </div>
