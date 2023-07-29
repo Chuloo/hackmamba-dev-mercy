@@ -69,7 +69,7 @@ export default function Community() {
       translateY: path("y"),
       // rotate: path("angle"),
       easing: "linear",
-      duration: 20000,
+      duration: 12000,
       loop: true,
     });
 
@@ -81,6 +81,7 @@ export default function Community() {
       easing: "linear",
       duration: 15000,
       loop: true,
+      direction: "reverse",
     });
     anime({
       targets: ".item3",
@@ -97,8 +98,10 @@ export default function Community() {
       translateY: path4("y"),
       // rotate: path("angle"),
       easing: "linear",
-      duration: 25000,
+      duration: 20000,
       loop: true,
+      direction: "reverse",
+      
     });
     anime({
       targets: ".item5",
@@ -106,8 +109,9 @@ export default function Community() {
       translateY: path5("y"),
       // rotate: path("angle"),
       easing: "linear",
-      duration: 13000,
+      duration: 15000,
       loop: true,
+      
     });
     anime({
       targets: ".item6",
@@ -115,8 +119,9 @@ export default function Community() {
       translateY: path6("y"),
       // rotate: path("angle"),
       easing: "linear",
-      duration: 12000,
+      duration: 17000,
       loop: true,
+      direction: "reverse",
     });
   }, []);
   return (
