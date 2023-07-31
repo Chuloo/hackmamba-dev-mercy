@@ -39,7 +39,7 @@ export default function Pricing() {
             price="$0"
             month="/monthly"
           />
-          <div className="sm:mt-[-32px]">
+          <div className="sm:mt-[-32px] z-10">
             <PricingFee
               icon={<img src={icon2} alt="icon" />}
               text="This is a perfect plan for starters"

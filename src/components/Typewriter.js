@@ -14,7 +14,9 @@ export default function Typewriter({ value }) {
 
   return (
     <>
-      <span className="absolute top-0 left-[0.906rem]">{text}</span>
+      <span className="absolute top-0 h-full flex items-center left-[0.906rem]">
+        {text}
+      </span>
 
       <span className="text-transparent">{value}</span>
     </>

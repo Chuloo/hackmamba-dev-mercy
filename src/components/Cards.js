@@ -1,10 +1,11 @@
 import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Img from "gatsby-image";
 import purpleIcon from "../images/purpleIcon.svg";
 import greyIcon from "../images/greyIcon.svg";
 import greenIcon from "../images/greenIcon.svg";
 import orangeIcon from "../images/orangeIcon.svg";
+import useIO from "../hooks/useIO";
 
 export default function Cards() {
   const data = useStaticQuery(graphql`
@@ -107,8 +108,15 @@ export default function Cards() {
     },
   ];
 
+  const cardRef = useRef();
+  // const [cardVisible, setCardVisible] = useState();
+  // console.log(cardVisible, "cardVisible");
+
+  const { isVisible } = useIO({ ref: cardRef });
+  console.log("isVisible", isVisible);
+
   return (
-    <div>
+    <div ref={cardRef} className={`cards ${isVisible ? "show" : " "}`}>
       {/* <div className="flex odd:flex-row-reverse">
         {folderRow1.map((c) => (
           <Folder content={c} />
@@ -120,10 +128,10 @@ export default function Cards() {
           <Folder content={c} />
         ))}
       </div> */}
-      <div className="sm:mt-[80px] mt-[112px]">
+      <div className={`sm:mt-[80px] mt-[112px] row`}>
         <FolderRow rowContent={folderRow1} />
       </div>
-      <div className="sm:mt-[48px] mt-[64px]">
+      <div className="sm:mt-[48px] mt-[64px] row">
         <FolderRow rowContent={folderRow2} />
       </div>
     </div>
@@ -132,7 +140,7 @@ export default function Cards() {
 
 function FolderRow({ rowContent }) {
   return (
-    <div className="flex sm:gap-[48px] gap-[64px] flex-col sm:flex-row">
+    <div className="flex sm:gap-[48px] gap-[64px] flex-col sm:flex-row ">
       {rowContent.map((eachObject) => (
         <Folder content={eachObject} />
       ))}
@@ -143,7 +151,7 @@ function FolderRow({ rowContent }) {
 function Folder({ content }) {
   return (
     <div
-      className={`flex-1 bg-cover bg-no-repeat relative ${
+      className={`flex-1 bg-cover bg-no-repeat relative card ${
         content.wide ? "max-w-[634px]" : "max-w-[488px]"
       }`}
     >

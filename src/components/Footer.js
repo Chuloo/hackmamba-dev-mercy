@@ -6,6 +6,7 @@ import footerTwitter from "../images/footer-twitter.svg";
 import footerLinkedin from "../images/footer-linkedin.svg";
 import connection2 from "../images/connection2.svg";
 import connection3 from "../images/connection3.svg";
+import Typewriter from "./Typewriter";
 
 export default function Footer() {
   return (
@@ -14,8 +15,12 @@ export default function Footer() {
         <div className="sm:max-w-[unset] sm:m-[unset] max-w-[327px] m-auto ">
           <h2 className="text-[56px] leading-[80px] max-w-[813px] text-primary sm:block hidden">
             Managing a business is hard enough, let us handle{" "}
-            <span className="span-style px-4">your </span>
-            <span className="span-style px-[11px]">content.</span>
+            <span className="span-style px-4 relative ">
+              <Typewriter value="your" />{" "}
+            </span>
+            <span className="span-style px-[11px] relative block w-fit">
+              <Typewriter value="content." />
+            </span>
           </h2>
 
           <h2 className="text-[56px] sm:leading-[80px] leading-[39px] max-w-[813px] text-primary block sm:hidden">
