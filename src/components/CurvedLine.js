@@ -5,10 +5,6 @@ import curvedLine2 from "../images/curvedLine2.svg";
 import useIO from "../hooks/useIO";
 
 export default function CurvedLine({ headingText, headingWidth }) {
-  // const lineRef = useRef();
-  // const { isVisible } = useIO({ ref: lineRef });
-  // console.log(isVisible, "isVisible....");
-
   const lineRef = useRef();
   const [progress, setProgress] = useState(1);
 

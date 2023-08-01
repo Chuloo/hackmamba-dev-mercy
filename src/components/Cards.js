@@ -115,7 +115,7 @@ export default function Cards() {
 
   return (
     <div ref={cardRef} className={`cards ${isVisible ? "show" : " "}`}>
-      <div className={`sm:mt-[80px] mt-[112px] row`}>
+      <div className={`sm:mt-[-5px] mt-[112px] row`}>
         <FolderRow rowContent={folderRow1} />
       </div>
       <div className="sm:mt-[48px] mt-[64px] row">
