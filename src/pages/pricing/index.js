@@ -10,6 +10,7 @@ import icon3 from "../../images/feeIcon3.svg";
 import blueTick from "../../images/blue-tick.svg";
 import greenTick from "../../images/green-tick.svg";
 import orangeTick from "../../images/orange-tick.svg";
+import Typewriter from "../../components/Typewriter";
 
 export default function Pricing() {
   return (
@@ -18,7 +19,10 @@ export default function Pricing() {
         <div className="text-center sm:max-w-[587px] max-w-[358px] mx-[auto] sm:mt-[120px] mt-[108px] sm:mb-[80px] mb-[48px]">
           <h2 className="text-[64px] sm:leading-[80px] text-primary sm:mb-[32px] mb-[16px] leading-[40px]">
             Pricing built for all{" "}
-            <span className="span-style px-[10px]">sizes</span>
+            <span className="span-style px-[10px] relative inline-block w-fit">
+              {" "}
+              <Typewriter value="sizes" />
+            </span>
           </h2>
           <p className="text-[18px]">
             Risus urna malesuada dolor velit sollicitudin quisque in, Et mattis

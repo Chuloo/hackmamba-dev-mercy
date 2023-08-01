@@ -51,7 +51,7 @@ export default function Testimonial() {
   ];
 
   return (
-    <section className="sm:max-w-[1246px] mx-[auto] mt-[160px] max-w-[343px]">
+    <section className="sm:max-w-[1246px] mx-[auto] mt-[160px] ">
       <div
         className="bg-no-repeat sm:bg-contain sm:bg-[center_top_6rem] bg-[center_top_0rem] sm:pb-[188px] pb-[160px] bg-[length:1246px_779px]"
         style={{ backgroundImage: `url(${map})` }}
@@ -71,7 +71,7 @@ export default function Testimonial() {
               <SwiperSlide>
                 <div
                   key={index}
-                  className="max-w-[759px] mx-[auto] px-[32px] sm:pb-[45px] pb-[80px] rounded-[24px] bg-white shadow-testimonialShadow sm:mt-[96px] mt-[104px] relative"
+                  className="sm:max-w-[759px] max-w-[343px] mx-[auto] px-[32px] sm:pb-[45px] pb-[80px]  bg-white shadow-testimonialShadow rounded-[24px] sm:mt-[96px] mt-[104px] relative"
                 >
                   <Img
                     fluid={avatar}
@@ -85,7 +85,7 @@ export default function Testimonial() {
                     <img
                       src={prev}
                       alt="prev"
-                      className="absolute sm:left-[-17px] left-[-10px] top-[50%] translate-y-[-50%] cursor-pointer"
+                      className="absolute sm:left-[-17px] left-[-10px] top-[50%] translate-y-[-50%] cursor-pointer z-10"
                     />
                     <img
                       src={next}

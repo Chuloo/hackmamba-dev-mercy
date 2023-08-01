@@ -101,7 +101,6 @@ export default function Community() {
       duration: 20000,
       loop: true,
       direction: "reverse",
-      
     });
     anime({
       targets: ".item5",
@@ -111,7 +110,6 @@ export default function Community() {
       easing: "linear",
       duration: 15000,
       loop: true,
-      
     });
     anime({
       targets: ".item6",
@@ -206,40 +204,40 @@ export default function Community() {
 
           <Img
             fluid={data.item1.childImageSharp.fluid}
-            className="sm:w-[130px] w-[60px] !absolute item1 top-[-55px] left-[-65px] origin-center rotate-[45]"
+            className="w-[130px] !absolute item1 top-[-55px] left-[-65px] origin-center"
           />
 
           <Img
             fluid={data.item2.childImageSharp.fluid}
-            className="sm:w-[130px] w-[60px] item2 !absolute top-[-56px] left-[-56px]"
+            className="w-[130px]  item2 !absolute top-[-56px] left-[-56px]"
           />
 
           <Img
             fluid={data.item3.childImageSharp.fluid}
-            className="sm:w-[130px] w-[50px] !absolute top-[-50px] left-[-56px] item3"
+            className="w-[130px]  !absolute top-[-50px] left-[-56px] item3"
           />
 
           <Img
             fluid={data.item4.childImageSharp.fluid}
-            className="sm:w-[130px] w-[60px] item4 !absolute top-[-50px] left-[-56px]"
+            className="w-[130px]  item4 !absolute top-[-50px] left-[-56px]"
           />
 
           <Img
             fluid={data.item5.childImageSharp.fluid}
-            className="sm:w-[130px] w-[60px] item5 !absolute top-[-60px] left-[-56px]"
+            className="w-[130px]  item5 !absolute top-[-60px] left-[-56px]"
           />
 
           <Img
             fluid={data.item6.childImageSharp.fluid}
-            className="sm:w-[130px] w-[50px] item6 !absolute top-[-50px] left-[-56px]"
+            className="w-[130px]  item6 !absolute top-[-50px] left-[-56px]"
           />
 
-          <img src={base3} alt="img" className="block lg:hidden w-full" />
+          {/* <img src={base3} alt="img" className="block lg:hidden w-full" /> */}
         </div>
         <img
           src={logo2}
           alt="img"
-          className=" absolute top-0 left-[50%] translate-x-[-50%] mt-[120px] sm:w-[unset] w-[72px]"
+          className=" absolute top-0 left-[50%] translate-x-[-50%] mt-[120px] sm:w-[unset] w-[60px]"
         />
 
         {/* <div className="flex flex-col sm:w-[1084px] w-[100%]">
@@ -251,11 +249,11 @@ export default function Community() {
 
         <div className="w-[132px] h-[180px] bg-white opacity-[0.30000001192092896] absolute top-[410px] right-[-23px] blur-[132px]"></div>
 
-        <div className="text-white  mx-[auto] absolute sm:top-[50%] sm:translate-x-[-50%] sm:left-[50%] sm:translate-y-[-50%] top-0 sm:mt-[65px] mt-[224px] w-full">
-          <h2 className="mx-[auto] sm:max-w-[629px] max-w-[286px] text-center sm:mb-[16px] mb-[32px] sm:leading-[56px] leading-[40px]">
+        <div className="text-white  mx-[auto] absolute sm:top-[50%] sm:translate-x-[-50%] sm:left-[50%] sm:translate-y-[-50%] top-0 sm:mt-[65px] mt-[194px] w-full">
+          <h2 className="mx-[auto] sm:max-w-[629px] max-w-[286px] text-center sm:mb-[16px] mb-[16px] sm:leading-[56px] leading-[30px] sm:!text-[48px] !text-[24px]">
             Join Our Technical Writing Community
           </h2>
-          <p className="text-center sm:mb-[88px] mb-[48px] text-white sm:max-w-[602px] m-[auto] max-w-[273px] leading-[32px] sm:leading-[32px]">
+          <p className="text-center sm:mb-[88px] mb-[30px] text-white sm:max-w-[602px] m-[auto] max-w-[230px] leading-[32px] sm:leading-[32px] sm:!text-base !text-sm">
             Do you have an interest in technical writing? Join our community of
             aspiring and veteran technical writers to network, get mentorship,
             and advance your technical writing career.

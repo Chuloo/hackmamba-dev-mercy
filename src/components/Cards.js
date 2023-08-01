@@ -109,25 +109,12 @@ export default function Cards() {
   ];
 
   const cardRef = useRef();
-  // const [cardVisible, setCardVisible] = useState();
-  // console.log(cardVisible, "cardVisible");
 
   const { isVisible } = useIO({ ref: cardRef });
   console.log("isVisible", isVisible);
 
   return (
     <div ref={cardRef} className={`cards ${isVisible ? "show" : " "}`}>
-      {/* <div className="flex odd:flex-row-reverse">
-        {folderRow1.map((c) => (
-          <Folder content={c} />
-        ))}
-      </div>
-
-      <div className="flex odd:flex-row-reverse">
-        {folderRow2.map((c) => (
-          <Folder content={c} />
-        ))}
-      </div> */}
       <div className={`sm:mt-[80px] mt-[112px] row`}>
         <FolderRow rowContent={folderRow1} />
       </div>
@@ -161,12 +148,18 @@ function Folder({ content }) {
             className={`shadow-folderShadow hidden sm:block`}
             fluid={content?.image}
           />
+        </>
+      ) : null}
+
+      {content?.mobileImg ? (
+        <>
           <Img
             className={`shadow-cardShadow block sm:hidden`}
             fluid={content?.mobileImg}
           />
         </>
       ) : null}
+
       <div className="absolute top-0 left-0">
         <div>
           <img

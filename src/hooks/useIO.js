@@ -6,14 +6,14 @@ function useIO({ ref }) {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
-
+        console.log(entry.isIntersecting, ref.current);
         // setIsVisible(entry.isIntersecting);
         if (entry.isIntersecting) {
           setIsVisible(true);
           observer.unobserve(ref.current);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.2 }
     );
     observer.observe(ref.current);
   }, []);

@@ -76,10 +76,16 @@
   }
 }
 
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 .cards .card {
   transform: translateY(200px);
   opacity: 0;
-  transition: 0.25s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .cards.show .card {
@@ -88,21 +94,21 @@
 }
 
 .cards.show .row:nth-child(1) .card:nth-child(2) {
-  transition-delay: 0.4s;
+  transition-delay: 0.1s;
 }
 
 .cards.show .row:nth-child(2) .card:nth-child(1) {
-  transition-delay: 0.8s;
+  transition-delay: 0.2s;
 }
 
 .cards.show .row:nth-child(2) .card:nth-child(2) {
-  transition-delay: 1s;
+  transition-delay: 0.3s;
 }
 
 .outcome-row .card {
   transform: translateY(-200px);
   opacity: 0;
-  transition: ease-in-out 0.25s;
+  transition: 0.7s ease-in-out ;
 }
 
 .outcome-row.show .card {
@@ -111,9 +117,32 @@
 }
 
 .outcome-row.show .card:nth-child(2) {
-  transition-delay: 0.4s;
+  transition-delay: 0.1s;
 }
 
 .outcome-row.show .card:nth-child(3) {
-  transition-delay: 0.8s;
+  transition-delay: 0.2s;
+}
+
+.moving-path {
+  stroke: #e3cfff;
+  stroke-width: 10;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+
+  animation-name: offset;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: translate(5px, 53px) !important;
+    opacity: 0 !important;
+  }
+  .swiper-button-disabled {
+    opacity: 0 !important;
+  }
 }
