@@ -29,6 +29,8 @@ export default function Product() {
     };
   }, [location]);
 
+  console.log(progress)
+
   return (
     <section
       id="about"
@@ -106,7 +108,7 @@ export default function Product() {
               stroke-linecap="round"
               stroke-linejoin="round"
               style={{
-                strokeDashoffset: `${progress * -1035}px`,
+                strokeDashoffset: `${(progress * 1.3) * -1035}px`,
                 strokeDasharray: `1035px`,
               }}
               
