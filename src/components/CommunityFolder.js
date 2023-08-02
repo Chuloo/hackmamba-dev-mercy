@@ -7,7 +7,7 @@ import Img from "gatsby-image";
 export default function CommunityFolder({ post }) {
   return (
     <Link to="#">
-      <div className="max-w-[369px] relative ">
+      <div className="max-w-[369px] relative hover:translate-y-[-12px] ease-in duration-300">
         <Img fluid={post.frontmatter.thumb.childImageSharp.fluid} />
 
         <h2 className="text-[24px] tracking-[0.2px] text-primary my-[16px] leading-[32px]">

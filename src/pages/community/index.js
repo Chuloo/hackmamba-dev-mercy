@@ -8,7 +8,6 @@ import CommunityFolder from "../../components/CommunityFolder";
 import Info from "../../components/Info";
 import session from "../../images/session.svg";
 import contactus2 from "../../images/contactus2.svg";
-import base from "../../images/base2.svg";
 import base2 from "../../images/base4.svg";
 import Btn from "../../components/Btn";
 import logo from "../../images/logo2.svg";
@@ -114,8 +113,8 @@ export default function Community({ data }) {
             />
           </div>
           <div className="relative flex-1 w-full">
-            <div className="w-[350px]  h-[305px] absolute left-[-318px] top-[-91px] transparent-gradient"></div>
-            <div className="w-[350px]  h-[305px] absolute left-[-318px] bottom-[0px] transparent-gradient"></div>
+            <div className="w-[350px]  h-[305px] absolute left-[-318px] top-[-91px] transparent-gradient sm:block hidden"></div>
+            <div className="w-[350px]  h-[305px] absolute left-[-318px] bottom-[0px] transparent-gradient sm:block hidden"></div>
             <svg
               width="518"
               height="749"
@@ -239,7 +238,7 @@ export default function Community({ data }) {
         </div>
 
         <div
-          className="bg-productSectionBg bg-cover bg-no-repeat sm:py-[120px] py-[80px] relative overflow-hidden sm:overflow-visible"
+          className="bg-productSectionBg bg-cover bg-no-repeat sm:py-[120px] py-[80px] relative overflow-hidden sm:overflow-visible background-none"
           style={{ backgroundImage: `url(${texture})` }}
         >
           <div className="sm:max-w-[1170px] max-w-[358px] mx-[auto]">

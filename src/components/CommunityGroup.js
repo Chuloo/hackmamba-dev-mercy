@@ -6,7 +6,15 @@ import Img from "gatsby-image";
 export default function CommunityGroup({ flexReverse }) {
   const data = useStaticQuery(graphql`
     query CommunityQuery {
-      file(relativePath: { eq: "gradient.png" }) {
+      gradient1: file(relativePath: { eq: "gradient.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      gradient2: file(relativePath: { eq: "gradient2.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -16,12 +24,11 @@ export default function CommunityGroup({ flexReverse }) {
     }
   `);
 
-
-
-
   return (
     <div>
-      <div className={`flex justify-between ${flexReverse} sm:flex-row flex-col-reverse`}>
+      <div
+        className={`flex justify-between ${flexReverse} sm:flex-row flex-col-reverse`}
+      >
         <div className="sm:mt-0 mt-[72px]">
           <h2 className="text-[32px] leading-[32px] font-bold mb-[36px]">
             Lorem Ipsum
@@ -58,8 +65,12 @@ export default function CommunityGroup({ flexReverse }) {
         </div>
 
         <Img
-          fluid={data?.file?.childImageSharp?.fluid}
-          className="w-[351px] sm:mt-[-32px] mt-[54px]"
+          fluid={data?.gradient1?.childImageSharp?.fluid}
+          className="w-[351px] sm:mt-[-32px] mt-[54px] sm:block hidden"
+        />
+        <Img
+          fluid={data?.gradient2?.childImageSharp?.fluid}
+          className="w-[351px] sm:mt-[-32px] mt-[54px] block sm:hidden"
         />
       </div>
     </div>

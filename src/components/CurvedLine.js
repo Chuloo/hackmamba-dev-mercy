@@ -1,8 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import tick from "../images/tick.svg";
-import curvedLine from "../images/curvedLine.svg";
-import curvedLine2 from "../images/curvedLine2.svg";
-import useIO from "../hooks/useIO";
+
 
 export default function CurvedLine({ headingText, headingWidth }) {
   const lineRef = useRef();

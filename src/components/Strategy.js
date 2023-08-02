@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
-import React from "react";
+import React, { useRef } from "react";
+import useIO from "../hooks/useIO";
 
 export default function Strategy() {
   const data = useStaticQuery(graphql`
@@ -14,10 +15,19 @@ export default function Strategy() {
       }
     }
   `);
+  const stratRef = useRef();
+
+  const { isVisible } = useIO({ ref: stratRef });
+
   return (
     <section className="sm:max-w-[1170px] mx-[auto] mt-0 sm:py-[160px] py-[120px] sm:px-[80px] max-w-[310px]  bg-strategyBg rounded-b-[40px] ">
-      <div className="max-w-[262px] m-[auto] sm:max-w-[unset] sm:m-[unset] flex justify-between sm:flex-row flex-col ">
-        <div className="sm:max-w-[605px] max-w-[268px]">
+      <div
+        className={`max-w-[262px] m-[auto] sm:max-w-[unset] sm:m-[unset] flex justify-between sm:flex-row flex-col ${
+          isVisible ? "fadeDown" : " "
+        }`}
+        ref={stratRef}
+      >
+        <div className="sm:max-w-[605px] max-w-[268px] fadeDown">
           <h2 className=" text-primary sm:mb-[20px] mb-[16px] sm:!leading-[56px] !leading-[39px]">
             Enjoy Community-Backed Content Amplification Strategy
           </h2>

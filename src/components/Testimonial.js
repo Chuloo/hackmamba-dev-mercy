@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper/modules";
+import useIO from "../hooks/useIO";
 
 export default function Testimonial() {
   const data = useStaticQuery(graphql`
@@ -50,13 +51,17 @@ export default function Testimonial() {
     },
   ];
 
+  const testimonialRef = useRef();
+
+  const { isVisible } = useIO({ ref: testimonialRef });
+
   return (
     <section className="sm:max-w-[1246px] mx-[auto] mt-[160px] ">
       <div
         className="bg-no-repeat sm:bg-contain sm:bg-[center_top_6rem] bg-[center_top_0rem] sm:pb-[188px] pb-[160px] bg-[length:1246px_779px]"
         style={{ backgroundImage: `url(${map})` }}
       >
-        <div className="">
+        <div className={`${isVisible ? "fadeDown" : " "}`} ref={testimonialRef}>
           <h2 className="sm:max-w-[489px] max-w-[358px] mx-[auto] text-center text-primary leading-[32px] sm:leading-[56px]">
             Don’t just take our word for it
           </h2>

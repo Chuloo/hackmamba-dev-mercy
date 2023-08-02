@@ -84,7 +84,6 @@ export default function BlogContent(props) {
   const { title, publish, author, featuredImg } = data?.post?.frontmatter;
   const post = data?.relatedPost?.nodes;
 
-  console.log(data?.nextPost);
 
   return (
     <section>

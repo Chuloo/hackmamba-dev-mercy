@@ -26,8 +26,14 @@ export default function Footer() {
           <h2 className="text-[56px] sm:leading-[80px] leading-[39px] max-w-[813px] text-primary block sm:hidden">
             Managing a business is hard enough,
             <span className="inline-block">
-              Let us handle <span className="span-style px-2.5">your </span>
-              <span className="span-style px-[11px]">content.</span>
+              Let us handle{" "}
+              <span className="span-style px-2.5 relative">
+                {" "}
+                <Typewriter value="your" />{" "}
+              </span>
+              <span className="span-style px-[11px] relative">
+                <Typewriter value="content." />
+              </span>
             </span>
           </h2>
 

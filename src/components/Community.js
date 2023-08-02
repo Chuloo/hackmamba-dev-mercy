@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import React, { useEffect } from "react";
-import base from "../images/base.svg";
 import base3 from "../images/base3.svg";
 import logo2 from "../images/logo2.svg";
 import Btn from "./Btn";
@@ -134,7 +133,7 @@ export default function Community() {
             viewBox="0 0 1113 749"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="base-bg"
+            className="base-bg sm:block hidden"
           >
             <g clip-path="url(#clip0_3248_250)">
               <path
@@ -201,43 +200,61 @@ export default function Community() {
               </clipPath>
             </defs>
           </svg>
+          <div className="sm:static absolute sm:top[unset]  sm:block flex flex-col sm:w-[unset] w-[100%]">
+            <Img
+              fluid={data.item1.childImageSharp.fluid}
+              className="sm:w-[130px] w-[60px] sm:!absolute item1 sm:top-[-55px] sm:left-[-65px]  origin-center sm:ml-[0] ml-[5px] sm:mt-0 mt-[11px]"
+            />
 
-          <Img
-            fluid={data.item1.childImageSharp.fluid}
-            className="w-[130px] !absolute item1 top-[-55px] left-[-65px] origin-center"
-          />
+            <Img
+              fluid={data.item2.childImageSharp.fluid}
+              className="sm:w-[130px] w-[60px] item2 sm:!absolute sm:top-[-56px] sm:left-[-56px] mt-[115px] ml-[-3px] sm:mt-0 sm:ml-0"
+            />
 
-          <Img
-            fluid={data.item2.childImageSharp.fluid}
-            className="w-[130px]  item2 !absolute top-[-56px] left-[-56px]"
-          />
+            <Img
+              fluid={data.item3.childImageSharp.fluid}
+              className="sm:w-[130px] w-[50px]  sm:!absolute sm:top-[-50px] sm:left-[-56px] item3 mt-[52px] sm:mt-0 sm:ml-0 ml-[10px]"
+            />
 
-          <Img
-            fluid={data.item3.childImageSharp.fluid}
-            className="w-[130px]  !absolute top-[-50px] left-[-56px] item3"
-          />
+            <Img
+              fluid={data.item4.childImageSharp.fluid}
+              className="sm:w-[130px] w-[60px]  item4 sm:!absolute sm:top-[-50px] sm:left-[-56px] mr-[-9px] sm:mr-0 sm:mt-0 hidden sm:block"
+            />
 
-          <Img
-            fluid={data.item4.childImageSharp.fluid}
-            className="w-[130px]  item4 !absolute top-[-50px] left-[-56px]"
-          />
+            <Img
+              fluid={data.item5.childImageSharp.fluid}
+              className="w-[130px]  item5 sm:!absolute top-[-60px] left-[-56px] hidden sm:block"
+            />
 
-          <Img
-            fluid={data.item5.childImageSharp.fluid}
-            className="w-[130px]  item5 !absolute top-[-60px] left-[-56px]"
-          />
+            <Img
+              fluid={data.item6.childImageSharp.fluid}
+              className="w-[130px]  item6 sm:!absolute top-[-50px] left-[-56px] hidden sm:block"
+            />
 
-          <Img
-            fluid={data.item6.childImageSharp.fluid}
-            className="w-[130px]  item6 !absolute top-[-50px] left-[-56px]"
-          />
+            <div className="absolute sm:top-[328px] top-[0] flex flex-col sm:w-[1084px] w-[100%] items-end sm:hidden mt-[85px]">
+              <Img
+                fluid={data.item4.childImageSharp.fluid}
+                className="sm:w-[130px] w-[60px]  item4 sm:!absolute sm:top-[-50px] sm:left-[-56px] mr-[-9px] sm:mr-0"
+              />
 
-          {/* <img src={base3} alt="img" className="block lg:hidden w-full" /> */}
+              <Img
+                fluid={data.item5.childImageSharp.fluid}
+                className="w-[60px] item5 mt-[60px] mr-[-6px]"
+              />
+
+              <Img
+                fluid={data.item6.childImageSharp.fluid}
+                className=" w-[50px]  mt-[62px]"
+              />
+            </div>
+          </div>
+
+          <img src={base3} alt="img" className="block lg:hidden w-full" />
         </div>
         <img
           src={logo2}
           alt="img"
-          className=" absolute top-0 left-[50%] translate-x-[-50%] mt-[120px] sm:w-[unset] w-[60px]"
+          className=" absolute top-0 left-[50%] translate-x-[-50%] mt-[120px] sm:w-[unset] w-[72px]"
         />
 
         {/* <div className="flex flex-col sm:w-[1084px] w-[100%]">
@@ -249,11 +266,11 @@ export default function Community() {
 
         <div className="w-[132px] h-[180px] bg-white opacity-[0.30000001192092896] absolute top-[410px] right-[-23px] blur-[132px]"></div>
 
-        <div className="text-white  mx-[auto] absolute sm:top-[50%] sm:translate-x-[-50%] sm:left-[50%] sm:translate-y-[-50%] top-0 sm:mt-[65px] mt-[194px] w-full">
-          <h2 className="mx-[auto] sm:max-w-[629px] max-w-[286px] text-center sm:mb-[16px] mb-[16px] sm:leading-[56px] leading-[30px] sm:!text-[48px] !text-[24px]">
+        <div className="text-white  mx-[auto] absolute sm:top-[50%] sm:translate-x-[-50%] sm:left-[50%] sm:translate-y-[-50%] top-0 sm:mt-[65px] mt-[244px] w-full">
+          <h2 className="mx-[auto] sm:max-w-[629px] max-w-[286px] text-center sm:mb-[16px] mb-[32px] sm:leading-[56px] leading-[40px]">
             Join Our Technical Writing Community
           </h2>
-          <p className="text-center sm:mb-[88px] mb-[30px] text-white sm:max-w-[602px] m-[auto] max-w-[230px] leading-[32px] sm:leading-[32px] sm:!text-base !text-sm">
+          <p className="text-center sm:mb-[88px] mb-[48px] text-white sm:max-w-[602px] m-[auto] max-w-[273px] leading-[32px] sm:leading-[32px] ">
             Do you have an interest in technical writing? Join our community of
             aspiring and veteran technical writers to network, get mentorship,
             and advance your technical writing career.

@@ -30,6 +30,11 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+.fadeRight {
+  animation-name: fadeRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 
 .rotationOne {
   animation-name: rotationOne;
@@ -71,8 +76,14 @@
   }
 }
 
-@keyframes rotationOne {
+@keyframes fadeRight {
   0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
 
@@ -108,7 +119,7 @@
 .outcome-row .card {
   transform: translateY(-200px);
   opacity: 0;
-  transition: 0.7s ease-in-out ;
+  transition: 0.7s ease-in-out;
 }
 
 .outcome-row.show .card {

@@ -14,15 +14,15 @@ export default function Contact({ data }) {
   return (
     <Layout>
       <section
-        className="bg-no-repeat bg-contain relative sm:mb-[100px] mb-[unset] bg-[center_top_3.5rem] contact-us"
+        className="bg-no-repeat bg-contain relative sm:mb-[100px] mb-[unset] bg-[center_top_3.5rem] background-none"
         style={{ backgroundImage: `url(${map})` }}
       >
         <div className="sm:max-w-[1170px]  max-w-[358px]  mx-[auto] pt-[120px] flex justify-between sm:flex-row flex-col">
           <div className="sm:mb-[60px] mb-[48px]">
-            <h2 className="text-primary max-w-[488px] leading-[60px] mb-[16px]">
+            <h2 className="text-primary max-w-[488px] sm:leading-[60px] mb-[16px] leading-[40px]">
               Hello there, how can we help you?
             </h2>
-            <p className="text-contactTextColor3 max-w-[489px] font-[400]">
+            <p className="text-contactTextColor3 max-w-[489px] font-[400] text-[18px] leading-[32px]">
               Contact us if you have any questions about our company or
               products. We will try to provide an answer within a few days.
             </p>

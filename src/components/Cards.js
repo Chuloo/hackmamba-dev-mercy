@@ -111,11 +111,10 @@ export default function Cards() {
   const cardRef = useRef();
 
   const { isVisible } = useIO({ ref: cardRef });
-  console.log("isVisible", isVisible);
 
   return (
     <div ref={cardRef} className={`cards ${isVisible ? "show" : " "}`}>
-      <div className={`sm:mt-[-5px] mt-[112px] row`}>
+      <div className={`sm:mt-[-5px] mt-[165px] row`}>
         <FolderRow rowContent={folderRow1} />
       </div>
       <div className="sm:mt-[48px] mt-[64px] row">
