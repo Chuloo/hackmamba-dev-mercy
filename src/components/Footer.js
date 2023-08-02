@@ -27,11 +27,11 @@ export default function Footer() {
             Managing a business is hard enough,
             <span className="inline-block">
               Let us handle{" "}
-              <span className="span-style px-2.5 relative">
+              <span className="span-style px-2.5 relative inline-block w-fit">
                 {" "}
                 <Typewriter value="your" />{" "}
               </span>
-              <span className="span-style px-[11px] relative">
+              <span className="span-style px-[11px] relative inline-block w-fit">
                 <Typewriter value="content." />
               </span>
             </span>

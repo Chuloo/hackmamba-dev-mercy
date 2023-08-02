@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Layout from "../../components/Layout";
 import Info from "../../components/Info";
 import session from "../../images/session.svg";
@@ -11,8 +11,12 @@ import blueTick from "../../images/blue-tick.svg";
 import greenTick from "../../images/green-tick.svg";
 import orangeTick from "../../images/orange-tick.svg";
 import Typewriter from "../../components/Typewriter";
+import useIO from "../../hooks/useIO";
 
 export default function Pricing() {
+  const pricingRef = useRef();
+
+  const { isVisible } = useIO({ ref: pricingRef });
   return (
     <Layout>
       <section className="relative">
@@ -31,19 +35,24 @@ export default function Pricing() {
           <div className="gradient-style top-[180px] right-[135px] sm:block hidden"></div>
         </div>
 
-        <div className="sm:max-w-[1200px] max-w-[358px] mx-[auto] flex sm:flex-row flex-col gap-[32px] sm:gap-0">
-          <PricingFee
-            icon={<img src={icon1} alt="icon" />}
-            text="This is a perfect plan for starters"
-            icon2={<img src={blueTick} alt="icon" />}
-            num="10,000"
-            num2="1"
-            num3="1"
-            rounded="left"
-            price="$0"
-            month="/monthly"
-          />
-          <div className="sm:mt-[-32px] z-10">
+        <div
+          className="sm:max-w-[1200px] max-w-[358px] mx-[auto] flex sm:flex-row flex-col gap-[32px] sm:gap-0"
+          ref={pricingRef}
+        >
+          <div className={`${isVisible ? "fadeRight" : " "}`}>
+            <PricingFee
+              icon={<img src={icon1} alt="icon" />}
+              text="This is a perfect plan for starters"
+              icon2={<img src={blueTick} alt="icon" />}
+              num="10,000"
+              num2="1"
+              num3="1"
+              rounded="left"
+              price="$0"
+              month="/monthly"
+            />
+          </div>
+          <div className={`sm:mt-[-32px] z-10 ${isVisible ? "fadeDown" : " "}`}>
             <PricingFee
               icon={<img src={icon2} alt="icon" />}
               text="This is a perfect plan for starters"
@@ -56,16 +65,18 @@ export default function Pricing() {
               height
             />
           </div>
-          <PricingFee
-            icon={<img src={icon3} alt="icon" />}
-            text="This is a perfect plan for starters"
-            icon2={<img src={orangeTick} alt="icon" />}
-            num="$1/10,000 events"
-            num2="$5/project"
-            num3=" $5/team member"
-            rounded="right"
-            price="Custom"
-          />
+          <div className={`${isVisible ? "fadeLeft" : " "}`}>
+            <PricingFee
+              icon={<img src={icon3} alt="icon" />}
+              text="This is a perfect plan for starters"
+              icon2={<img src={orangeTick} alt="icon" />}
+              num="$1/10,000 events"
+              num2="$5/project"
+              num3=" $5/team member"
+              rounded="right"
+              price="Custom"
+            />
+          </div>
         </div>
 
         <div className="bg-productSectionBg relative mt-[160px]">
