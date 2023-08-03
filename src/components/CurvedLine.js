@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import tick from "../images/tick.svg";
 
-
 export default function CurvedLine({ headingText, headingWidth }) {
   const lineRef = useRef();
   const [progress, setProgress] = useState(1);
@@ -36,16 +35,16 @@ export default function CurvedLine({ headingText, headingWidth }) {
           <path
             d="M5.00002 5.00001H209.517H904C939.346 5.00001 968 33.6538 968 69V205"
             stroke="#403A5D"
-            stroke-width="10"
-            stroke-linecap="square"
-            stroke-linejoin="round"
+            strokeWidth="10"
+            strokeLinecap="square"
+            strokeLinejoin="round"
           />
           <path
             d="M5 5H209.517H904C939.346 5 968 33.6538 968 69L968 205.5"
             stroke="#98C1EC"
-            stroke-width="10"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             style={{
               strokeDashoffset: `${progress * 1200}px`,
               strokeDasharray: `1200px`,
@@ -64,16 +63,16 @@ export default function CurvedLine({ headingText, headingWidth }) {
           <path
             d="M5.45285 5.50598L5.42661 73.034L5.35455 258.514C5.34068 294.232 34.5666 323.049 70.2813 322.532L141.623 321.499C172.121 321.057 197.336 345.156 198.276 375.642V375.642L198.278 485.005"
             stroke="#403A5D"
-            stroke-width="10"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M5.45241 5.50616L5.42618 73.0342L5.35412 258.514C5.34025 294.232 34.5662 323.049 70.2809 322.532L141.623 321.499C172.12 321.057 197.336 345.156 198.275 375.642V375.642L198.275 484"
             stroke="#98C1EC"
-            stroke-width="10"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             style={{
               strokeDashoffset: `${progress * 622}px`,
               strokeDasharray: `622px`,

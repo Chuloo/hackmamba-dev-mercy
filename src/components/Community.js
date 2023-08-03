@@ -135,26 +135,26 @@ export default function Community() {
             xmlns="http://www.w3.org/2000/svg"
             className="base-bg sm:block hidden"
           >
-            <g clip-path="url(#clip0_3248_250)">
+            <g clipPath="url(#clip0_3248_250)">
               <path
                 opacity="0.1"
                 d="M556.5 748C863.294 748 1112 580.778 1112 374.5C1112 168.222 863.294 1 556.5 1C249.706 1 1 168.222 1 374.5C1 580.778 249.706 748 556.5 748Z"
                 stroke="url(#paint0_linear_3248_250)"
-                stroke-width="1.53846"
+                strokeWidth="1.53846"
                 className="path1"
               />
               <path
                 opacity="0.1"
                 d="M556 711C818.335 711 1031 560.568 1031 375C1031 189.432 818.335 39 556 39C293.665 39 81 189.432 81 375C81 560.568 293.665 711 556 711Z"
                 stroke="url(#paint1_linear_3248_250)"
-                stroke-width="1.53846"
+                strokeWidth="1.53846"
                 className="path2"
               />
               <path
                 opacity="0.1"
                 d="M556.5 675C782.108 675 965 540.685 965 375C965 209.315 782.108 75 556.5 75C330.892 75 148 209.315 148 375C148 540.685 330.892 675 556.5 675Z"
                 stroke="url(#paint2_linear_3248_250)"
-                stroke-width="1.53846"
+                strokeWidth="1.53846"
                 className="path3"
               />
             </g>
@@ -167,9 +167,9 @@ export default function Community() {
                 y2="375.283"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#F8FBFF" />
-                <stop offset="0.469679" stop-color="#5E3F99" stop-opacity="0" />
-                <stop offset="1" stop-color="white" />
+                <stop stopColor="#F8FBFF" />
+                <stop offset="0.469679" stopColor="#5E3F99" stopOpacity="0" />
+                <stop offset="1" stopColor="white" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_3248_250"
@@ -179,9 +179,9 @@ export default function Community() {
                 y2="375.704"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#F8FBFF" />
-                <stop offset="0.469679" stop-color="#5E3F99" stop-opacity="0" />
-                <stop offset="1" stop-color="white" />
+                <stop stopColor="#F8FBFF" />
+                <stop offset="0.469679" stopColor="#5E3F99" stopOpacity="0" />
+                <stop offset="1" stopColor="white" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_3248_250"
@@ -191,9 +191,9 @@ export default function Community() {
                 y2="375.629"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#F8FBFF" />
-                <stop offset="0.469679" stop-color="#5E3F99" stop-opacity="0" />
-                <stop offset="1" stop-color="white" />
+                <stop stopColor="#F8FBFF" />
+                <stop offset="0.469679" stopColor="#5E3F99" stopOpacity="0" />
+                <stop offset="1" stopColor="white" />
               </linearGradient>
               <clipPath id="clip0_3248_250">
                 <rect width="1113" height="749" fill="white" />

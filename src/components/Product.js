@@ -29,7 +29,6 @@ export default function Product() {
     };
   }, [location]);
 
-  console.log(progress)
 
   return (
     <section
@@ -51,16 +50,16 @@ export default function Product() {
             <path
               d="M390 501L390 414C390 378.654 361.346 350 326 350H86.7642H69C33.6538 350 5 321.346 5 286V156.5V112C5 76.6538 33.6538 48 69 48H93"
               stroke="#403A5D"
-              stroke-width="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="10"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M390 501L390 414C390 378.654 361.346 350 326 350H86.7642H69C33.6538 350 5 321.346 5 286V156.5V112C5 76.6538 33.6538 48 69 48H93"
               stroke="#98C1EC"
-              stroke-width="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="10"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               style={{
                 strokeDashoffset: `${progress * -845}px`,
                 strokeDasharray: `845px`,
@@ -77,12 +76,12 @@ export default function Product() {
             <path
               d="M128.079 57.0529L140.277 67.0432"
               stroke="#221C3F"
-              stroke-width="3.88267"
+              strokeWidth="3.88267"
             />
             <path
               d="M155.216 46.2783L137.574 67.2745"
               stroke="#221C3F"
-              stroke-width="3.88267"
+              strokeWidth="3.88267"
             />
           </svg>
 
@@ -97,16 +96,16 @@ export default function Product() {
             <path
               d="M242.785 819.191L242.776 764.276L242.082 744.682C240.847 709.765 211.835 682.291 176.902 682.957L122.228 684L63.4137 685.122V685.122C31.1176 685.738 4.60765 659.698 4.61718 627.395C4.66853 453.191 4.70213 339.223 4.75782 150.397L4.77555 104.747C4.78928 69.4115 33.4379 40.7732 68.7738 40.7722L101.392 40.7713"
               stroke="#403A5C"
-              stroke-width="8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M242.785 819.191L242.776 764.276L242.082 744.682C240.847 709.765 211.835 682.291 176.902 682.957L122.228 684L63.4137 685.122V685.122C31.1176 685.738 4.60765 659.698 4.61718 627.395C4.66853 453.191 4.70213 339.223 4.75782 150.397L4.77555 104.747C4.78928 69.4115 33.4379 40.7732 68.7738 40.7722L101.392 40.7713"
               stroke="#98C1EC"
-              stroke-width="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="10"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               style={{
                 strokeDashoffset: `${(progress * 1.3) * -1035}px`,
                 strokeDasharray: `1035px`,
@@ -124,12 +123,12 @@ export default function Product() {
             <path
               d="M109.771 40.7517L118.484 47.8876"
               stroke="#221C3F"
-              stroke-width="3.88267"
+              strokeWidth="3.88267"
             />
             <path
               d="M129.154 33.0557L116.553 48.0529"
               stroke="#221C3F"
-              stroke-width="3.88267"
+              strokeWidth="3.88267"
             />
           </svg>
 

@@ -147,6 +147,63 @@
   animation-fill-mode: forwards;
 }
 
+.flip-logo-container {
+  /* background-color: #192226; */
+  height: 100px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+ transform: translateX(-20px);
+}
+
+.flip-logo-container__top,
+.flip-logo-container__bottom {
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+
+.flip-span {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.flip-span .flip-span_img {
+  position: absolute;
+  height: 200%;
+  width: 100%;
+  object-fit: contain;
+  background-color: #f6f6f6;
+  padding: 0 20px;
+}
+
+.flip-span:nth-child(2) .flip-span_img {
+  transform: rotateX(180deg);
+}
+
+.flip-span:nth-child(3) {
+  z-index: 20;
+}
+
+.flip-logo-container .flip-logo-container__top::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 10px 5px #f6f6f6;
+  z-index: 2000;
+}
+
+.flip-logo-container .flip-logo-container__bottom .flip-span .flip-span_img {
+  bottom: 0;
+}
+
 @media (max-width: 768px) {
   .swiper-button-next,
   .swiper-button-prev {
@@ -155,5 +212,13 @@
   }
   .swiper-button-disabled {
     opacity: 0 !important;
+  }
+  .flip-logo-container {
+    width: 120px;
+    transform: translateX(-5px);
+  }
+  .flip-span .flip-span_img {
+    padding: 0;
+    padding: 0 10px;
   }
 }
