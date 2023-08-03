@@ -147,13 +147,11 @@
 }
 
 .flip-logo-container {
-  /* background-color: #192226; */
-  height: 100px;
-  width: 200px;
+  height: 30px;
+  width: 110px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transform: translateX(-20px);
 }
 
 .flip-logo-container__top,
@@ -177,7 +175,6 @@
   width: 100%;
   object-fit: contain;
   background-color: #f6f6f6;
-  padding: 0 20px;
 }
 
 .flip-span:nth-child(2) .flip-span_img {
@@ -195,7 +192,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  box-shadow: 0 0 10px 5px #f6f6f6;
+  box-shadow: 0 0 5px 6px #f6f6f6;
   z-index: 2000;
 }
 
@@ -214,11 +211,9 @@
   }
 
   .flip-logo-container {
-    width: 120px;
-    transform: translateX(-5px);
+    width: 100px;
   }
   .flip-span .flip-span_img {
     padding: 0;
-    padding: 0 10px;
   }
 }
