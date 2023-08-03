@@ -61,8 +61,9 @@ export default function Hero() {
 
         <div className="sm:mt-[180px] mt-[56px]">
           <p>We work with organisations like</p>
-          <div className="organisations flex  overflow-hidden sm:overflow-auto">
-            <div style={{ display: "flex" }}>
+          <div className="organisations flex  overflow-hidden sm:overflow-auto mt-[30px] ">
+            <div className="flex sm:gap-[45px] gap-[25px]">
+              <FlipLogo />
               <FlipLogo />
               <FlipLogo />
               <FlipLogo />
