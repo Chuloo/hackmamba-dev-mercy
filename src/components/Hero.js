@@ -1,15 +1,12 @@
 import { graphql, useStaticQuery } from "gatsby";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import connection from "../images/connection.svg";
 import longArrow from "../images/longArrow.svg";
 import vector from "../images/vector.svg";
 import Img from "gatsby-image";
 import Input from "./Input";
-import saasToday from "../images/saastoday.svg";
-import askimat from "../images/askimat.svg";
-import martino from "../images/martino.svg";
-import rocker from "../images/rocker.svg";
 import Typewriter from "./Typewriter";
+import FlipLogo from "./FlipLogo";
 
 export default function Hero() {
   const data = useStaticQuery(graphql`
@@ -50,7 +47,9 @@ export default function Hero() {
               <Typewriter value="Technical Content" />{" "}
             </span>
             for Your World Changing{" "}
-            <span className="span-style px-4 relative"><Typewriter value="Products" /></span>{" "}
+            <span className="span-style px-4 relative">
+              <Typewriter value="Products" />
+            </span>{" "}
           </h1>
           <img
             src={connection}
@@ -62,15 +61,12 @@ export default function Hero() {
 
         <div className="sm:mt-[180px] mt-[56px]">
           <p>We work with organisations like</p>
-          <div className="organisations flex sm:gap-[45px] gap-[40px] mt-[27px] overflow-hidden sm:overflow-auto">
-            <img
-              src={saasToday}
-              alt="logo1"
-              className="sm:w-[unset] w-[73px]"
-            />
-            <img src={askimat} alt="logo2" className="sm:w-[unset] w-[100px]" />
-            <img src={martino} alt="logo3" className="sm:w-[unset] w-[100px]" />
-            <img src={rocker} alt="logo4" className="sm:w-[unset] w-[100px]" />
+          <div className="organisations flex  overflow-hidden sm:overflow-auto">
+            <div style={{ display: "flex" }}>
+              <FlipLogo />
+              <FlipLogo />
+              <FlipLogo />
+            </div>
           </div>
         </div>
       </div>

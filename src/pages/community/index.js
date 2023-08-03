@@ -153,8 +153,8 @@ export default function Community({ data }) {
                   y2="674"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#4F00A3" />
-                  <stop offset="1" stop-color="white" stop-opacity="0.41" />
+                  <stop stopColor="#4F00A3" />
+                  <stop offset="1" stopColor="white" stopOpacity="0.41" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_800_4079"
@@ -164,8 +164,8 @@ export default function Community({ data }) {
                   y2="710.65"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#4F00A3" />
-                  <stop offset="1" stop-color="white" stop-opacity="0.41" />
+                  <stop stopColor="#4F00A3" />
+                  <stop offset="1" stopColor="white" stopOpacity="0.41" />
                 </linearGradient>
                 <linearGradient
                   id="paint2_linear_800_4079"
@@ -175,8 +175,8 @@ export default function Community({ data }) {
                   y2="748"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#4F00A3" />
-                  <stop offset="1" stop-color="white" stop-opacity="0.41" />
+                  <stop stopColor="#4F00A3" />
+                  <stop offset="1" stopColor="white" stopOpacity="0.41" />
                 </linearGradient>
               </defs>
             </svg>
