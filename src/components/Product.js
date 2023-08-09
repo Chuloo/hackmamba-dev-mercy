@@ -29,7 +29,6 @@ export default function Product() {
     };
   }, [location]);
 
-
   return (
     <section
       id="about"
@@ -40,29 +39,29 @@ export default function Product() {
       <div className="max-w-[310px] mx-auto sm:max-w-[1170px] relative">
         <div ref={lineRef}>
           <svg
-            width="395"
-            height="506"
-            viewBox="0 0 395 506"
+            width="397"
+            height="512"
+            viewBox="0 0 397 512"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className="sm:block hidden"
           >
             <path
-              d="M390 501L390 414C390 378.654 361.346 350 326 350H86.7642H69C33.6538 350 5 321.346 5 286V156.5V112C5 76.6538 33.6538 48 69 48H93"
+              d="M106 47.5H64C31.4152 47.5 5 73.9152 5 106.5V106.5V305.5C5 335.6 29.4005 360 59.5 360V360H336V360C366.928 360 392 385.072 392 416V506.5"
               stroke="#403A5D"
-              strokeWidth="10"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             />
             <path
-              d="M390 501L390 414C390 378.654 361.346 350 326 350H86.7642H69C33.6538 350 5 321.346 5 286V156.5V112C5 76.6538 33.6538 48 69 48H93"
+              d="M106 47.5H64C31.4152 47.5 5 73.9152 5 106.5V106.5V305.5C5 335.6 29.4005 360 59.5 360V360H336V360C366.928 360 392 385.072 392 416V506.5"
               stroke="#98C1EC"
-              strokeWidth="10"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
               style={{
-                strokeDashoffset: `${progress * -845}px`,
-                strokeDasharray: `845px`,
+                strokeDashoffset: `${progress * 875}px`,
+                strokeDasharray: `875px`,
               }}
             />
             <path
@@ -76,12 +75,12 @@ export default function Product() {
             <path
               d="M128.079 57.0529L140.277 67.0432"
               stroke="#221C3F"
-              strokeWidth="3.88267"
+              stroke-width="3.88267"
             />
             <path
               d="M155.216 46.2783L137.574 67.2745"
               stroke="#221C3F"
-              strokeWidth="3.88267"
+              stroke-width="3.88267"
             />
           </svg>
 
@@ -107,10 +106,9 @@ export default function Product() {
               strokeLinecap="round"
               strokeLinejoin="round"
               style={{
-                strokeDashoffset: `${(progress * 1.3) * -1035}px`,
+                strokeDashoffset: `${progress * 1.3 * -1035}px`,
                 strokeDasharray: `1035px`,
               }}
-              
             />
             <path
               d="M119 80C141.091 80 159 62.0914 159 40C159 17.9086 141.091 0 119 0C96.9086 0 79 17.9086 79 40C79 62.0914 96.9086 80 119 80Z"
@@ -131,8 +129,6 @@ export default function Product() {
               strokeWidth="3.88267"
             />
           </svg>
-
-
         </div>
         <div className="sm:absolute top-[154px] left-[20px] w-full">
           <h2 className="sm:max-w-[830px] sm:ml-[80px] max-w-[284px] translate-x-[33px] sm:translate-x-0 pt-[126px] sm:pt-[unset]">
