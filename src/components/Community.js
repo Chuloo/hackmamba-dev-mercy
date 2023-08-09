@@ -122,7 +122,7 @@ export default function Community() {
     });
   }, []);
   return (
-    <section className=" bg-productSectionBg sm:pt-[102px] pt-[136px] sm:pb-[18px] pb-[243px] relative overflow-hidden">
+    <section className=" bg-productSectionBg sm:pt-[102px] pt-[136px] sm:pb-[50px] pb-[243px] relative overflow-hidden">
       <div className=" max-w-[1170px] mx-[auto]">
         <div className="rounded-[480.87px] w-[353px] h-[481px] opacity-[0.2800000011920929] bg-greenGradient blur-[167px] absolute top-[-238px] left-[766px] hidden sm:block"></div>
         <div className=" max-w-[1084px] mx-[auto] relative ">
